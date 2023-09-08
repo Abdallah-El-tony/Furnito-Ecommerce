@@ -1,0 +1,21 @@
+.quate-icon img {
+    height:45px;
+    object-fit: contain;
+    margin:auto;
+}
+.tes__card {
+    text-align:center;
+    padding:40px;
+}
+.tes__desc {
+    margin-top:30px;
+}
+.tes__desc h3 {
+    font-size:20px;
+    color:#333333;
+}
+.tes__desc p {
+    color:#666666;
+    font-size:16px;
+    line-height:26px;
+}

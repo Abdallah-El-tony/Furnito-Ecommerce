@@ -1,0 +1,66 @@
+h2,h3,h4,h5 {
+    color:#333333;
+}
+
+.about__story {
+    padding-top:59px;
+    padding-bottom:90px;
+}
+.story__text h2 {
+    font-size: 46px;
+    line-height: 60px;
+    font-weight:600;
+    margin: -13px 0 0;
+}
+ p {
+    font-size:16px;
+    color:#666666;
+    margin-top:1.5rem;
+}
+.quate-img {
+    width:60px;
+    height:60;
+    object-fit: contain;
+}
+.client__info h3 {
+    font-size:20px;
+}
+.client__avatar {
+    width:64px;
+    margin-bottom:25px;
+}
+.client__avatar img {
+    border-radius:50%;
+}
+.cleint__card {
+    padding:40px;
+}
+.member__desc h3 {
+    font-size:24px;
+    margin-top:10px;
+}
+.card__content {
+    border:1px solid rgba(221, 221, 221, 0.5);
+    margin:0 10px;
+}
+.counters {
+    border:2px dashed var(--main-color);
+    padding:80px 0;
+}
+.single-counter h2 {
+    font-size:32px;
+    position:relative;
+    margin-bottom:20px ;
+    padding-bottom:20px;
+}
+.single-counter h2::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:20%;
+    height:3.5px;
+    background-color: var(--main-color);
+}

@@ -1,0 +1,111 @@
+.cart__info img {
+    width:110px;
+    height:110px;
+    object-fit: cover;
+    border-radius:10px;
+}
+.cart__header {
+    background: rgba(221, 221, 221, 0.4);
+}
+.cart__header td  {
+    font-size:19px;
+    padding:20px 20px 20px 5px;
+    font-weight:500;
+    color:var(--secondary-color) !important;
+}
+.cart__item h3 , .cart__total-amount h3 {
+    font-size:18px;
+    color:#333333;
+    margin-bottom:0;
+}
+.cart__item span {
+   background-color: #0d6efd;
+   color:#fff;
+   padding:5px 10px;
+   border-radius:5px;
+   font-size:14px;
+   display:inline-block;
+}
+.cart__quantity-btns button, .cart__quantity-btns input{
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    padding:0 5px;
+    width:35px;
+    height:35px;
+    color:var(--secondary-color);
+    background-color:#DDDDDD66;
+    font-size:20px;
+    outline:none;
+}
+.cart__quantity-btns input {
+    width:50px;
+    text-align:center;
+
+}
+.cart__item:not(.table-responsivie) td {
+   padding:20px 0;
+}
+.cart__item:not(.table-responsivie)  tr ,.table-responsivie{
+    border-bottom:1px solid #DDDDDD66;
+}
+.table-responsivie img{
+width:100px;
+height:100px;
+}
+.table-responsivie th {
+    padding-left:15px;
+}
+.table-responsivie td {
+    text-align:right;
+    padding:15px;
+}
+.cart__total {
+    padding:40px 30px;
+}
+.cart__total h2 {
+    font-size:24px;
+    color:#333333;
+}
+.total__info li h3 {
+    font-size:18px;
+    color:#333333;
+    font-weight:600;
+}
+.total__info li {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #DDDDDD66;
+}
+.total__info li:first-child{
+    border-top:1px solid #DDDDDD66;
+}
+.btn-checkout , .viewcart-btn:hover{
+    background-color:var(--main-color)!important;
+    color:#fff !important;
+    color:2px solid var(--main-color);
+}
+.btn-checkout:hover , .viewcart-btn {
+    background-color:#ffff !important;
+    color:var(--main-color) !important;
+    border:2px solid var(--main-color) !important;
+}
+.items_container .items {
+    max-height:240px;
+    overflow:auto;
+}
+.footer-btns  button:hover {
+    background-color:var(--main-color);
+    color:#fff;
+}
+
+
+@media (max-width:575px) {
+    .cart__item h3 , .cart__item h5 , .quantity{
+        font-size:15px;
+    }
+    .order-summary {
+        padding:10px;
+    }
+}
+ 

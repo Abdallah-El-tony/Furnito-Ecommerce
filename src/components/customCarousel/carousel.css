@@ -1,0 +1,20 @@
+.relatec-product .alice-carousel__prev-btn,.relatec-product .alice-carousel__next-btn {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width:fit-content;
+    border:1px solid #ddd;
+    padding:0px 10px;
+}
+.relatec-product .alice-carousel__prev-btn {
+    right:60px
+}
+.relatec-product .alice-carousel__prev-btn:hover ,.relatec-product .alice-carousel__next-btn:Hover {
+    border-color:var(--main-color)
+}
+.alice-carousel__prev-btn:hover [data-area]::after,
+.alice-carousel__next-btn:Hover [data-area]::after{
+    color:var(--main-color) !important;
+}
+ 
+  

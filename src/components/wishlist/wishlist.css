@@ -1,0 +1,80 @@
+.share-icons {
+    left:-3px;
+    padding:10px 0 !important;
+    background-color: var(--main-color);
+    margin-top: 24px !important;
+    transition:0.5s;
+    z-index:99;
+    transform:translateY(-20px);
+    opacity: 0;
+}
+.share-icons::before {
+    content: '';
+    border: 15px solid var(--main-color);
+    border-color: transparent transparent var(--main-color) transparent;
+    position: absolute;
+    top: -28px;
+    left: 15px;
+    border-left-width: 7px;
+    border-right-width: 7px
+}
+.share-icons button {
+    border:none;
+    border-radius:0 !important;
+    padding:10px 15px;
+    z-index:100;
+    transition:0.5s;
+}
+.share-icons button:hover {
+    transform: scale(1.4);
+}
+.facebook-color {
+    background-color:#4267b2  !important;
+}
+.twitter-color {
+    background-color:#1da1f2  !important;
+}
+.in-color {
+    background-color: #0072b1 !important;
+}
+.pintrest-color {
+    background-color:#e60023 !important;
+}
+.share-btn:hover ul{
+    opacity: 1;
+    transform: none;
+
+}
+.hasTooltib {
+    position:relative;
+}
+.hasTooltib::before {
+    position:absolute;
+    content: attr(data-tooltip);
+    background-color:black;
+    color:#fff;
+    left:-56px;
+    top:45px;
+    width:150px;
+    padding:5px 5px;
+    border-radius:5px;
+    z-index:9;
+    transition:0.3s;
+    font-size:14px;
+    opacity:0;
+
+}
+.hasTooltib::after {
+    content:"";
+    position:absolute;
+    border: 15px solid var(--main-color);
+    border-color: transparent transparent black transparent;
+    z-index:9;
+    left:5px;
+    bottom:-13px;
+    opacity:0;
+    transition:0.3s;
+}
+.hasTooltib:hover::before , .hasTooltib:Hover::after {
+    opacity:1;
+}

@@ -1,0 +1,27 @@
+.contact__info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    font-size: 28px;
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    color: #666666;
+    border-radius: 50%;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer !important;
+}
+.contact__info > div:hover a {
+    border-color:var(--main-color);
+    color:var(--main-color)
+}
+.contact__info h4 {
+    font-size:20px;
+}
+.contact__info p {
+    color:#888888;
+}
+iframe {
+    width:100%;
+}

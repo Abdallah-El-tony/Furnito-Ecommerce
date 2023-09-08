@@ -1,0 +1,13 @@
+.brand {
+    max-width:170px;
+    margin:0 auto;
+}
+.slick-dots {
+    bottom:-50px !important;
+}
+.slick-dots li button:before {
+    font-size:12px !important;
+}
+.slick-dots li.slick-active button::before {
+    color:var(--main-color) !important;
+}

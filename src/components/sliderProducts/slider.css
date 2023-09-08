@@ -1,0 +1,55 @@
+.slider {
+    overflow: hidden !important;
+}
+.slider__descreption h3 {
+    color:#333333;
+    font-size:24px;
+    line-height:28px;
+    font-weight:400;
+}
+.slider__descreption p {
+    color:#666666;
+    margin-top:10px;
+}
+.slider .alice-carousel__stage-item * {
+  text-align: center;
+}
+.alice-carousel__dots {
+  display:none;
+}
+.slider .alice-carousel__prev-btn, .slider .alice-carousel__next-btn {
+  position: absolute;
+  top: 50%;
+  border:1px solid #ddd;
+  background-color:#fff;
+  transform: translateY(-50%);
+  transform:rotateY(180deg);
+  z-index:9;
+  border-radius:50%;
+  width:40px !important;
+  height:40px !important;
+  display:flex !important;
+  align-items: center;
+  justify-content: center;
+  padding:0 !important;
+  transition:0.3s;
+  opacity:0;
+}
+.slider .alice-carousel__prev-btn:hover, .slider .alice-carousel__next-btn:hover {
+  border-color:var(--main-color) !important;
+  color:var(--main-color);
+}
+.slider .alice-carousel__prev-btn {
+  left: -4px;
+}
+
+.slider .alice-carousel__next-btn {
+  right: -4px;
+}
+.slider:hover .alice-carousel__prev-btn ,.slider:hover .alice-carousel__next-btn {
+    opacity:1;
+    transform:rotateX(0)
+}
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+  color:#333333 !important;
+}
