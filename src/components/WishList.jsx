@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './Navbar/navbar.css'
 import {SuitHeart} from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux'

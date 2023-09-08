@@ -21,7 +21,7 @@ const WishListPage = () => {
       <section className='py-5 my-4'>
         <div className="container">
             {wishlist.length < 1 ? 
-                <div className='text-center'><h2>No Procuts To Compare </h2></div>:
+                <div className='text-center'><h2>No Procuts in Wishlist </h2></div>:
                 <div className="row">
                 {wishlist.map(product=>(
                   <div className="col-sm-6 col-md-4 col-lg-3">
