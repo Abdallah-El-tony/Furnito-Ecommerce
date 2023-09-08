@@ -1,0 +1,520 @@
+{
+  "Catigory": [
+    "All",
+    "Bamboo Furniture",
+    "Wooden Furniture",
+    "Wikker or ratten furniture",
+    "Metal Furnitutre",
+    "Plastic Furniture"
+  ],
+  "TrendyProducts": [
+    {
+      "id": 22,
+      "name": "Small Dining Table",
+      "price": "7,500$",
+      "altPrice": "8,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345911672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "New Arrival",
+      "rate": "4"
+    },
+    {
+      "id": 23,
+      "name": "Doug Wooden Table",
+      "price": "$450",
+      "altPrice": "500$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345901672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "100 sales",
+      "rate": "4"
+    },
+    {
+      "id": 24,
+      "name": "Solid Wood table",
+      "price": "450$",
+      "altPrice": "500$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "80 sales",
+      "rate": "4"
+    },
+    {
+      "id": 25,
+      "name": "stylish Hall Room Chair",
+      "price": "7,500$",
+      "altPrice": "8,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345881672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "90 sales",
+      "rate": "4"
+    }
+  ],
+  "Store": [
+    {
+      "id": 1,
+      "name": "Bamboo Table",
+      "price": "7,500$",
+      "altPrice": "8,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+      "catigory": "Bamboo Furniture",
+      "lingth": "2",
+      "color": "warning",
+      "sales": "90 sales",
+      "rate": "4"
+    },
+    {
+      "id": 2,
+      "name": "Bamboo Chair",
+      "price": "6,500$",
+      "altPrice": "7,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346051672748266.png",
+      "catigory": "Bamboo Furniture",
+      "lingth": "2",
+      "sales": "90 sales",
+      "color": "yellow",
+      "rate": "4"
+    },
+    {
+      "id": 3,
+      "name": "Ratten Chair",
+      "price": "5,500$",
+      "altPrice": "6,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346111672748267.png",
+      "catigory": "Wikker or ratten furniture",
+      "lingth": 5,
+      "sales": "100 sales",
+      "color": "warning",
+      "rate": "3"
+    },
+    {
+      "id": 4,
+      "name": "Wikker Chair",
+      "price": "5,500$",
+      "altPrice": "6,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346091672748267.png",
+      "catigory": "Wikker or ratten furniture",
+      "lingth": 5,
+      "sales": "70 sales",
+      "rate": "2"
+    },
+    {
+      "id": 5,
+      "name": "Wikker Chair",
+      "price": "8,500$",
+      "altPrice": "6,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346071672748266.png",
+      "catigory": "Wikker or ratten furniture",
+      "lingth": 5,
+      "color": "red",
+      "sales": "90 sales",
+      "rate": "1"
+    },
+    {
+      "id": 6,
+      "name": "Wikker Chair",
+      "color": "darkblue",
+      "price": "8,500$",
+      "altPrice": "6,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346061672748266.png",
+      "catigory": "Wikker or ratten furniture",
+      "lingth": 5,
+      "sales": "60 sales",
+      "rate": "1"
+    },
+    {
+      "id": 7,
+      "name": "Obhai almirah",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346171672748267.png",
+      "catigory": "Metal Furnitutre",
+      "lingth": 2,
+      "sales": "50 sales",
+      "rate": "2"
+    },
+    {
+      "id": 8,
+      "name": "table Wood Almirah",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346151672748267.png",
+      "catigory": "Metal Furnitutre",
+      "lingth": 2,
+      "sales": "150 sales",
+      "color": "black",
+      "rate": "1"
+    },
+    {
+      "id": 9,
+      "name": "plastic chair",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346041672748266.png",
+      "catigory": "Plastic Furniture",
+      "lingth": 1,
+      "sales": "90 sales",
+      "color": "white",
+      "rate": "5"
+    },
+    {
+      "id": 10,
+      "name": "Odrex Double Bed",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346211672748268.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "70 sales",
+      "rate": "2"
+    },
+    {
+      "id": 11,
+      "name": "Angle Double Bed",
+      "price": "3,300$",
+      "altPrice": "4,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346201672748268.png",
+      "catigory": "All",
+      "lingth": 9,
+      "color": "white",
+      "sales": "40 sales",
+      "rate": "1"
+    },
+    {
+      "id": 12,
+      "name": "Phonex Double Bed",
+      "price": "3,300$",
+      "altPrice": "4,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346181672748268.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "100 sales",
+      "color": "warning",
+      "rate": "2"
+    },
+    {
+      "id": 13,
+      "name": "care wood stool",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346001672748265.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "98 sales",
+      "rate": "3"
+    },
+    {
+      "id": 14,
+      "name": "Obhai almirah",
+      "price": "1,300$",
+      "altPrice": "2,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346171672748267.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "99 sales",
+      "rate": "5"
+    },
+    {
+      "id": 15,
+      "name": "Bamboo Table",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "140 sales",
+      "rate": "3"
+    },
+    {
+      "id": 16,
+      "name": "Wood Almirah",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346151672748267.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "120 sales",
+      "rate": "2"
+    },
+    {
+      "id": 17,
+      "name": "Raymond Wood Bed",
+      "price": "4,300$",
+      "altPrice": "5,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346141672748267.png",
+      "catigory": "All",
+      "lingth": 9,
+      "sales": "80 sales",
+      "color": "warning",
+      "rate": "1"
+    },
+    {
+      "id": 18,
+      "name": "Small Dining Table",
+      "price": "7,500$",
+      "altPrice": "8,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345911672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "color": "white",
+      "sales": "New Arrival",
+      "rate": "5"
+    },
+    {
+      "id": 19,
+      "name": "Doug Wooden Table",
+      "price": "$450",
+      "altPrice": "500$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345901672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "100 sales",
+      "rate": "2"
+    },
+    {
+      "id": 20,
+      "name": "Solid Wood table",
+      "price": "450$",
+      "altPrice": "500$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "80 sales",
+      "rate": "1"
+    },
+    {
+      "id": 21,
+      "name": "stylish Hall Room Chair",
+      "price": "7,500$",
+      "altPrice": "8,000$",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345881672748264.png",
+      "catigory": "Wooden Furniture",
+      "lingth": 10,
+      "sales": "90 sales",
+      "rate": "2",
+      "color": "penk"
+    }
+  ],
+  "Clients": [
+    {
+      "avatar": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/author21668255526.jpg",
+      "feedback": "Growers Supply Company sells high-quality hydroponic equipment, including pumps, timers, controllers, and more.",
+      "clientName": "Wyatt Mayer",
+      "rate": "4"
+    },
+    {
+      "avatar": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/author31668255526.jpg",
+      "feedback": "Greenhouse Supply Company offers everything you need to start growing indoors. They sell everything from lighting systems to grow tents.",
+      "clientName": "Jolene Mercer",
+      "rate": "4"
+    },
+    {
+      "avatar": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/theme1-fd11668255526.jpg",
+      "feedback": "Best Shop is a company that sells top quality products at affordable prices. Their products are guaranteed to work and they have great customer service. ",
+      "clientName": "Ethan Errara",
+      "rate": "4"
+    },
+    {
+      "avatar": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/theme1-fd21668255526.jpg",
+      "feedback": "Gourmet Gardening Supplies sells a variety of gardening tools and supplies ",
+      "clientName": "John Abraham",
+      "rate": "4"
+    }
+  ],
+  "Team": [
+    {
+      "id": 1,
+      "person": "https://preview.colorlib.com/theme/edustage/img/trainer/t1.jpg.webp",
+      "name": "Jhor Sena",
+      "job": "SEO"
+    },
+    {
+      "id": 2,
+      "person": "https://preview.colorlib.com/theme/edustage/img/trainer/t2.jpg.webp",
+      "name": "Winstom Doyle",
+      "job": "SEO"
+    },
+    {
+      "id": 3,
+      "person": "https://preview.colorlib.com/theme/edustage/img/trainer/t3.jpg.webp",
+      "name": "Abraham Lincon",
+      "job": "Chairman"
+    },
+    {
+      "id": 4,
+      "person": "https://preview.colorlib.com/theme/edustage/img/trainer/t4.jpg.webp",
+      "name": "Brook Listner",
+      "job": "Sales Manager"
+    }
+  ],
+  "Blogs": [
+    {
+      "id": "1",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog11665986714.jpg",
+      "name": "Money witty books nor son add. Chicken age had evening...",
+      "catigory": "Travel",
+      "date": "20"
+    },
+    {
+      "id": "2",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog21665986714.jpg",
+      "name": "Was drawing natural fat respect husband",
+      "catigory": "Online Courses",
+      "date": "10"
+    },
+    {
+      "id": "3",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog31665986714.jpg",
+      "name": "Ten Highways is my organization are added and seal there..",
+      "catigory": "Hosting",
+      "date": "20"
+    },
+    {
+      "id": "4",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog21665986714.jpg",
+      "name": "Attended no indulged marriage is to judgment offering landlords",
+      "catigory": "Game",
+      "date": "17"
+    },
+    {
+      "id": "5",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog11665986714.jpg",
+      "name": "Miss told ham dull knew see she spot near can",
+      "catigory": "Resturant",
+      "date": "30"
+    },
+    {
+      "id": "6",
+      "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/blog31665986714.jpg",
+      "name": "Do enjoyment defective objection or we if favourite",
+      "catigory": "Ticket",
+      "date": "20"
+    }
+  ],
+  "users": [
+    {
+      "name": "abdullah",
+      "cart": [
+        {
+          "id": 24,
+          "name": "Solid Wood table",
+          "price": "450$",
+          "altPrice": "500$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+          "catigory": "Wooden Furniture",
+          "lingth": 10,
+          "sales": "80 sales",
+          "rate": "4",
+          "quantity": 13
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 24,
+          "name": "Solid Wood table",
+          "price": "450$",
+          "altPrice": "500$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+          "catigory": "Wooden Furniture",
+          "lingth": 10,
+          "sales": "80 sales",
+          "rate": "4"
+        }
+      ],
+      "userName": "Eltony",
+      "email": "kio@gmail.com",
+      "city": "dfgd",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "ahmed sayed",
+      "cart": [
+        {
+          "id": 5,
+          "name": "Wikker Chair",
+          "price": "8,500$",
+          "altPrice": "6,000$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346071672748266.png",
+          "catigory": "Wikker or ratten furniture",
+          "lingth": 5,
+          "sales": "90 sales",
+          "quantity": 1
+        }
+      ],
+      "wishlist": [],
+      "userName": "Sayed",
+      "email": "sayed@gmail.com",
+      "city": "fayoum",
+      "password": "2003",
+      "id": 2
+    },
+    {
+      "name": "Ahmed Salama",
+      "cart": [
+        {
+          "id": 13,
+          "name": "care wood stool",
+          "price": "4,300$",
+          "altPrice": "5,000$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346001672748265.png",
+          "catigory": "All",
+          "sales": "98 sales",
+          "color": "darkblue",
+          "quantity": 1
+        }
+      ],
+      "wishlist": [],
+      "userName": "Salama",
+      "email": "se@gmail.com",
+      "city": "fayoum",
+      "password": "sm123",
+      "id": 3
+    },
+    {
+      "name": "Abdullah ",
+      "cart": [],
+      "wishList": [],
+      "userName": "Eltony",
+      "email": "am6959@fayoum.edu.eg",
+      "city": "sdf",
+      "password": "20021",
+      "id": 4
+    },
+    {
+      "name": "kamal",
+      "cart": [
+        {
+          "id": 23,
+          "name": "Doug Wooden Table",
+          "price": "$450",
+          "altPrice": "500$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/grid/grid-frame-345901672748264.png",
+          "catigory": "Wooden Furniture",
+          "sales": "100 sales",
+          "quantity": 1
+        },
+        {
+          "id": 24,
+          "name": "Solid Wood table",
+          "price": "450$",
+          "altPrice": "500$",
+          "img": "https://furniture.nazmart.net/assets/tenant/uploads/media-uploader/furniture/frame-346161672748267.png",
+          "catigory": "Wooden Furniture",
+          "sales": "80 sales",
+          "quantity": 1
+        }
+      ],
+      "wishList": [],
+      "userName": "Elgammal",
+      "email": "Kamal@gmail.io",
+      "city": "Cairo",
+      "password": "2004",
+      "id": 6,
+      "wishlist": []
+    }
+  ]
+}
