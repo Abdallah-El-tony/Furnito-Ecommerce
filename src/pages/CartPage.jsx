@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { BreadCrumb, CartList, CustomBtn, TotalPrice } from '../components'
 import '../components/cart/cart.css'
 import { useSelector } from 'react-redux'

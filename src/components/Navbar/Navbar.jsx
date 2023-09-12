@@ -11,7 +11,6 @@ import togglarIcon from '../../assets/images/icons/togglar-icon.png'
 import closeIcon from '../../assets/images/icons/close-icon.png'
 import { useState } from 'react';
 import 'animate.css';
-import { ChevronUp } from 'react-bootstrap-icons';
 import Scroll from '../Scroll';
 
 

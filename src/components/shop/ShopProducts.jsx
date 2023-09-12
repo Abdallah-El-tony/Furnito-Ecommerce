@@ -40,7 +40,7 @@ const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
                 }catch(Err) {console.log(Err)}
         }
         getProductds()
-    },[filterData , products.length , isPrice])
+    },[filterData, products.length, isPrice, isSort])
   return (
    <>
    {isloading && <Loader/>}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import { BreadCrumb ,SelectBox} from '../components'
@@ -9,6 +8,7 @@ import { addUser} from '../store/slices/userSlice'
 import { AuthActions } from '../store/slices/AuthSlice'
 import { useGetLocation } from '../hooks/useGetLocation'
 import { userSchema } from '../Validations/UserValidation'
+import { Eye , EyeSlash } from 'react-bootstrap-icons'
 
 const SignUp = () => {
   useGetLocation()
@@ -17,14 +17,15 @@ const SignUp = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-const [user,setUser] = useState([{
-  name:"",
-  email:"",
-  userName:"",
-  password:"",
-  confirmPassword:"",
-  city:""
-}])
+  const [showPassword,setShowPassword] = useState(false)
+  const [user,setUser] = useState([{
+    name:"",
+    email:"",
+    userName:"",
+    password:"",
+    confirmPassword:"",
+    city:""
+  }])
 
 
   const HandleChange = (e)=>{
@@ -98,34 +99,39 @@ const [user,setUser] = useState([{
                  />
 
                 <div className="row justify-content-between align-items-center my-4">
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 position-relative">
                     <label className="" htmlFor="rememberMe">Password*</label>
-                    <input 
-                    {...register("password")}
-                    className="form-control"
-                     type="password" id="password"
-                      placeholder='Password'name='password'
-                      onChange={HandleChange}
-                      /> 
+                    <div className='position-relative'>
+                      <input 
+                      {...register("password")}
+                        className="form-control"
+                        type={showPassword?'text':'password'} id="password"
+                        placeholder='Password'name='password'
+                        onChange={HandleChange}
+                        /> 
+                        <span className='position-absolute eye' onClick={()=>setShowPassword(!showPassword)}>{showPassword?<EyeSlash size={20}/>:<Eye size={20}/>}</span>
+                    </div>
                       {errors.password?(
                       <p className='text-danger mb-0'>{errors.password.message}</p>
                       ):(<></>)}
 
-
                   </div>
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 position-relative">
                     <label className="" htmlFor="confirm">Confirm Passowrd*</label>
-                    <input 
-                      {...register("confirmPassword")}
-                       className="form-control"
-                       type="password" id="confirm" placeholder='Confirm Passowrd'
-                       name='confirmPassword'
-                       onChange={HandleChange}
-                       /> 
-                     {errors.confirmPassword?(
+                    <div className='position-relative'>
+                        <input 
+                         {...register("confirmPassword")}
+                          className="form-control"
+                          type={showPassword?'text':'password'} placeholder='Confirm Passowrd'
+                          name='confirmPassword'
+                          onChange={HandleChange}
+                          />
+                          <span className='position-absolute eye' onClick={()=>setShowPassword(!showPassword)}>{showPassword?<EyeSlash size={20}/>:<Eye size={20}/>}</span>
+                    </div> 
+                       
+                    {errors.confirmPassword?(
                     <p className='text-danger mb-0'>{errors.confirmPassword.message}</p>
                     ):(<></>)}
-
                   </div>
                 </div>
                 <input type="submit" className='custom-btn py-2 px-4 mb-3' value='Sign Up'/>

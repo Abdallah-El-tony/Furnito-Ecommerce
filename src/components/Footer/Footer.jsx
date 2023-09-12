@@ -4,7 +4,6 @@ import { NavLinks , Services } from '../../constants'
 import payments from '../../assets/images/main-images/png1672834115.png'
 
 import './footer.css'
-import CustomBtn from '../CustomBtn'
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (

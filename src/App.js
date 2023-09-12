@@ -19,19 +19,23 @@ function App() {
 
     dispatch(getUsers())
 
-    if(isAuth)
-    dispatch(getCartData(userId))
-    dispatch(getWishlistData(userId))
+    if(isAuth) {
+      dispatch(getCartData(userId))
+      dispatch(getWishlistData(userId))
+    }
+    
   
   },[dispatch, isAuth, userId])
 
   useEffect(()=>{
   // *** updatae the user cart  and wishList ***
-  if(isAuth)
+  if(isAuth) {
     dispatch(updateCartData({id:userId , cart:cartList}))
     dispatch(updateWishlistData({id:userId, wishlist}))
 
-  },[cartList,isAuth,userId ,wishlist])
+  }
+   
+  },[cartList, dispatch, isAuth, userId, wishlist])
 
   return (
     <div className="App">

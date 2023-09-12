@@ -37,7 +37,7 @@ const BlogProducts = ({filterData , resetData , getSort ,isSort}) => {
                 }catch(Err) {console.log(Err)}
         }
         getProductds()
-    },[filterData , products.length])
+    },[filterData, isSort, products.length])
   return (
    <>
     {isloading?<Loader/>:<div className="product-container">

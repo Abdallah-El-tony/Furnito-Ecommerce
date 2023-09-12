@@ -1,16 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CartItem from './cart/CartItem'
 import { useSelector } from 'react-redux'
 import {methods} from '../constants'
+import { v4 as uuidv4 } from 'uuid';
+
 import CustomBtn from './CustomBtn'
+import Sign from './Sign';
 
 const OrdarSummary = () => {
+    const [signTitle , setSignTitle] = useState('')
+    const [signDesc , setSignDesc] = useState('')
+    const [sign,setSign] = useState(null)
+    const [signType,setSignType] = useState('success')
+    const handleRef = (ref)=>{
+        setSign(ref)
+    }
     const {cartList} = useSelector(state=>state.Cart)
+    const [isChecked , setIsChecked] = useState(false)
     var total  = 0;
     cartList.forEach(item=>{
       total+=parseFloat(item.price.replace('$', '').replace(',', '')) * item.quantity;
     })
+
+    const selectMethod =(e)=>{
+    const targetElm = e.target.closest('.payment-method')
+    document.querySelector('.selected').classList.remove('selected')
+    targetElm.classList.add('selected')
+    }
+
+    const clickHandler = ()=>{
+        if(!isChecked) {
+            setSignTitle('')
+            setSignDesc('You need to agree to our Terms & Conditions to complete the order')
+            setSignType('danger')
+            sign.classList.add('show-sign')    
+           
+            const timeStart = setTimeout(()=>{
+                sign.classList.remove('show-sign')
+            },2000)
+            
+            sign.addEventListener('mouseover',()=>{
+                clearInterval(timeStart)
+            })
+        }
+    }
   return (
+   <>
     <div className="col-12 col-xl-4">
        <div className="order-summary border">
         <h2 className='mb-3'>Ordar Summary</h2>
@@ -64,22 +99,25 @@ const OrdarSummary = () => {
                 <div className="payment-methods">
                     <h5 className='mb-3 mt-4'>Select Payment Method</h5>
                     <div className='methodes d-flex flex-wrap gap-2'>
-                        {methods.map(method=>(
-                            <div className='border payment-method'>
-                                <img src={method} alt="" />
-                            </div>
+                        {methods.map((method,index)=>(
+                            <button key={uuidv4()} className={`${index===0?'selected':''} payment-method`} onClick={selectMethod}>
+                                <img src={method} alt="" onClick={selectMethod}/>
+                            </button>
                         ))}
                     </div>
                 </div>
                 <div className="agreement-terms d-flex gap-2 align-items-start my-2 pt-3">
-                    <input type="checkbox" className='border p-2 rounded-0 mt-1'/>
-                    <p className='text-black'>I have I have read and agree to the <span className='color-main fs-6'>website terms and conditions*</span></p>
+                    <input type="checkbox" className='border p-2 rounded-0 mt-1' checked={isChecked} onChange={(e)=>setIsChecked(e.target.checked)}/>
+                    <p className='text-black'>I have read and agree to the <span className='color-main fs-6'>website terms and conditions*</span></p>
                 </div>
-                <CustomBtn styleContainer='custom-btn w-100 mt-3 mb-2 py-3' title='Proceed to Checkout'/>
+                <CustomBtn styleContainer='custom-btn w-100 mt-3 mb-2 py-3' title='Proceed to Checkout' onClick={clickHandler}/>
                 <CustomBtn styleContainer='outline-color w-100 my-2 py-3' title='Return to Cart'/>
             </div>
        </div>
     </div>
+    <Sign handleRef={handleRef} title={signTitle} descreption={signDesc} signType={signType}/>
+
+   </>
   )
 }
 

@@ -27,7 +27,7 @@ const SingleCounter = ({counter,title}) => {
           return () => {
                 clearInterval(timer)
           };
-        }, []);
+        }, [counter]);
 
     
   return (

@@ -121,7 +121,7 @@ const CartList = ({items}) => {
             <button onClick = {()=>navigate('/shop')} className='border py-2 px-4'>Continue Shopping</button>
             <button onClick = {clearAllHandler} className='ms-3 py-2 px-4'>Clear Cart</button>
         </div>
-        <Sign descreption='Cart Updated' title='' handleRef={handleRef}/>
+        <Sign title='Cart Updated' handleRef={handleRef}/>
     </>
   )
 }

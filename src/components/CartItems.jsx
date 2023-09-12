@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import {Cart} from 'react-bootstrap-icons'
 import '../components/cart/cart.css'
 import CartItem from './cart/CartItem'

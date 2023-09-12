@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
-
+@import '@fortawesome/fontawesome-free/css/all.css';
 * {
   margin:0;
   padding:0;
@@ -72,6 +72,9 @@ h1 , h2 , h3 , h4 , h5 {
 }
 .warning-bg {
   background-color:var(--wanrning-color) !important;
+}
+.danger-bg {
+  background-color:#ab0a0a !important;
 }
 .warning-bg-anim {
   background-color:#b17520e7 !important;
@@ -316,6 +319,11 @@ input:not([type='checkbox']) , input:not([type='submit']) {
   bottom:0;
 
 }
+.eye {
+  right:10px;
+  top:30%;
+  cursor: pointer;
+}
 .not-found button {
   font-weight: 500;
   border-radius: 6px;
@@ -392,6 +400,25 @@ input:not([type='checkbox']) , input:not([type='submit']) {
   align-items: center;
   position: relative;
   overflow: hidden;
+  border:1px solid #ddd;
+}
+.selected {
+  position:relative;
+  border:2px solid #930ed8 !important
+}
+.selected::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  position:absolute;
+  border-radius:50%;
+  display: grid;
+  place-content: center;
+  top:0px;
+  right:0;
+  color:#fff;
+  background-color:#930ed8;
+  width:15px;
+  height:15px;
 }
 .order-summary {
   padding:30px;

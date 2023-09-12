@@ -91,7 +91,7 @@ const VirticalSingleProduct = ({img,title,sales,hasBtn,price,altPrice,isBlog , o
                     </p>
                     :
                     <div className="product__links pt-3 pt-lg-5 mt-3 mt-lg-5 gap-2 gap-md-3 flex-wrap">
-                    {hasBtn && <CustomBtn title='Add to Cart' styleContainer='custom-btn py-2 px-3' object={object} signRef={sign}/>}
+                    {hasBtn && <CustomBtn title='Add to Cart' styleContainer='custom-btn py-2 px-3' object={object} signRef={sign} setSignType={setSignType}/>}
                     <button onClick={(e)=>handleClick(e,'wishlist')}>{<Heart size={20}/>}</button>
                     <button onClick={(e)=>handleClick(e,'compare')}>{<ArrowRepeat size={20}/>}</button>
                     <button onClick={(e)=>handleClick(e,'view')}>{<Eye size={20}/>}</button>

@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { WishlistActions } from '../store/slices/wishes'
 
 const WishListPage = () => {
-
   useGetLocation()
   const {removeWishlistItem} = WishlistActions;
   const dispatch = useDispatch()
 
   const {wishlist} = useSelector(state=>state.Wishlist)
+  console.log(wishlist)
   const removeProductHandler = (item)=>{
     dispatch(removeWishlistItem(item))
   }
@@ -20,7 +20,7 @@ const WishListPage = () => {
       <section>
       <section className='py-5 my-4'>
         <div className="container">
-            {wishlist.length < 1 ? 
+            {wishlist?.length < 1 ? 
                 <div className='text-center'><h2>No Procuts in Wishlist </h2></div>:
                 <div className="row">
                 {wishlist.map(product=>(

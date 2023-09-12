@@ -26,6 +26,7 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
     const handleRef = (ref)=>{
         setSign(ref)
     }
+    
     const item = {...object,quantity:1}
     
     const handleClick = (e,type,)=> {
@@ -37,10 +38,15 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
                 setSignType('success')
 
                 // **** sign animation *****
+               
                 sign.classList.add('show-sign')    
-                setTimeout(()=>{
+                const timeStart = setTimeout(()=>{
                     sign.classList.remove('show-sign')
                 },2000)
+                
+                sign.addEventListener('mouseover',()=>{
+                    clearInterval(timeStart)
+                })
 
                 // *** add item in cart ***
                 dispatch(addItem(item))
@@ -56,9 +62,13 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
                 setSignDesc('Item Added to Compare')
                 dispatch(addProdcut(object))
                 sign.classList.add('show-sign')
-                setTimeout(()=>{
+                const timeStart = setTimeout(()=>{
                     sign.classList.remove('show-sign')
                 },2000)
+                
+                sign.addEventListener('mouseover',()=>{
+                    clearInterval(timeStart)
+                })
                 break;
             }
 
@@ -69,9 +79,13 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
                     setSignTitle('')
                     setSignDesc('Item Added to WishList')
                     sign.classList.add('show-sign')
-                    setTimeout(()=>{
-                    sign.classList.remove('show-sign')
+                    const timeStart = setTimeout(()=>{
+                        sign.classList.remove('show-sign')
                     },2000)
+                    
+                    sign.addEventListener('mouseover',()=>{
+                        clearInterval(timeStart)
+                    })
 
                 }else {
                     setSignTitle('')
@@ -79,9 +93,13 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
                     setSignDesc('If you want to add cart item into wishlist than you have to login first.')
                     console.log('login first')
                     sign.classList.add('show-sign')
-                    setTimeout(()=>{
-                    sign.classList.remove('show-sign')
+                    const timeStart = setTimeout(()=>{
+                        sign.classList.remove('show-sign')
                     },2000)
+                    
+                    sign.addEventListener('mouseover',()=>{
+                        clearInterval(timeStart)
+                    })
                 }
                 break;
             }
@@ -113,7 +131,7 @@ const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , 
                             <span className='price'>{price}</span>
                             <span className='altPrice'>{altPrice}</span>
                         </div>
-                        {hasBtn && <CustomBtn title='Add to Cart' styleContainer='outline-color text-secondary fw-semibold' object={object} signRef={sign}/>}
+                        {hasBtn && <CustomBtn title='Add to Cart' styleContainer='outline-color text-secondary fw-semibold' object={object} signRef={sign} setSignType={setSignType}/>}
                     </div>
                 </div>
             </div>
