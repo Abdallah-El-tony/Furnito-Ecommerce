@@ -220,4 +220,13 @@ form.select ul li:hover {
     transform: rotate(61deg);
     left: 6px;
 
-} 
+}
+.shop-loader .loader {
+   left:65%;
+}
+
+@media (max-width:775px) {
+    .shop-loader .loader {
+        left:50%;
+    }
+}

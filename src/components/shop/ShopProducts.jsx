@@ -5,12 +5,10 @@ import Loader from '../loaders/Loader'
 import VirticalSingleProduct from './VirticalSingleProduct'
 import './shop.css'
 import ShopHeader from './ShopHeader'
-import { useSelector } from 'react-redux'
 
 const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
-    const {loading} = useSelector(state=>state.LoaderReducer)
     const [products,setProducts] = useState([])
-    const [isloading,setIsLoading] = useState(loading)
+    const [isloading,setIsLoading] = useState(true)
     const [direction,setDirection] = useState('horizontal')
 
     const setIsVirtical = (direction)=>{
@@ -43,7 +41,7 @@ const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
     },[filterData, products.length, isPrice, isSort])
   return (
    <>
-   {isloading && <Loader/>}
+   {isloading && <div className='shop-loader'><Loader/></div>}
     <div className="product-container">
         <div className="row ms-md-0 ms-md-5 justify-content-center">
             <ShopHeader setIsVirtical={setIsVirtical} filterSelected = {filterData} currentDataLenght ={products.length} resetData={resetData} getSort={getSort} isBlog={false}/>
