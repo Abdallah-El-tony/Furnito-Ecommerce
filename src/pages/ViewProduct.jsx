@@ -15,9 +15,9 @@ const ViewProduct = () => {
       let result;
       const getTargetProduct = async()=>{
         if(Number(id) >= 22 ) {
-          result = await axios.get(`http://localhost:3000/TrendyProducts/${id}`)
+          result = await axios.get(`https://my-server-rc7a.onrender.com/TrendyProducts/${id}`)
         }else {
-          result = await axios.get(`http://localhost:3000/Store/${id}`)
+          result = await axios.get(`https://my-server-rc7a.onrender.com/Store/${id}`)
         }
         setTargetProduct(result.data)
       }
