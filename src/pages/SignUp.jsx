@@ -24,15 +24,16 @@ const SignUp = () => {
     userName:"",
     password:"",
     confirmPassword:"",
-    city:""
+    city:"",
   }])
 
 
   const HandleChange = (e)=>{
-    setUser({...user,[e.target.name]:e.target.value , cart:[] , wishList:[]})
+    setUser({...user,[e.target.name]:e.target.value , cart:[],wishlist:[]})
   }
 
   const submitHandler = ()=>{
+    console.log(user.wishlist)
     delete user.confirmPassword
     if(user.userName === undefined || user.password===undefined){
       return

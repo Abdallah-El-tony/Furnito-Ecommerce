@@ -42,7 +42,7 @@ const LoginForm = ({customStyle}) => {
         }
       }
       const getData = async()=>{
-        const response = await axios.get('http://localhost:3000/users')
+        const response = await axios.get('https://my-server-rc7a.onrender.com/users')
         setUsersData(response.data)
       }
       getData()

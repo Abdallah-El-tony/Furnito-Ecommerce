@@ -9,7 +9,7 @@ const Testimonials = () => {
     const [testimonials,setTestimonials] = useState([])
     useEffect(()=>{
         const getTestimonials = async()=>{
-            const result = await axios.get('http://localhost:3000/Clients')
+            const result = await axios.get('https://my-server-rc7a.onrender.com/Clients')
             setTestimonials(result.data)
         }
         getTestimonials()

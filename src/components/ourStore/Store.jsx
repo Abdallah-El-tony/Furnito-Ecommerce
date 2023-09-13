@@ -17,7 +17,7 @@ const Store = () => {
                 let result;
              if(currentCategory === '')
                 setCurrentCaetegory('All')
-                result = await axios.get(`http://localhost:3000/Store?catigory=${currentCategory}`)
+                result = await axios.get(`https://my-server-rc7a.onrender.com/Store?catigory=${currentCategory}`)
                 setProducts(result.data)
                 setIsLoading(false)
             }catch(err) {

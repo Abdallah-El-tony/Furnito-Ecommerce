@@ -27,14 +27,14 @@ const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
         const getProductds = async()=>{
             try {
                 if(filterData === '' || filterData === undefined) {
-                    result = await axios.get(`http://localhost:3000/Store?catigory=All`)
+                    result = await axios.get(`https://my-server-rc7a.onrender.com/Store?catigory=All`)
                 }else if(isPrice) {
-                    result = await axios.get(`http://localhost:3000/Store?price_gte=${0}&price_lte=${parseFloat(filterData)}`)
+                    result = await axios.get(`https://my-server-rc7a.onrender.com/Store?price_gte=${0}&price_lte=${parseFloat(filterData)}`)
                 }else if(isSort) {
-                    result = await axios.get(`http://localhost:3000/Store?_sort=${filterData}&_order=asc`)
+                    result = await axios.get(`https://my-server-rc7a.onrender.com/Store?_sort=${filterData}&_order=asc`)
                 }
                 else
-                 result = await axios.get(`http://localhost:3000/Store?q=${filterData}`)
+                 result = await axios.get(`https://my-server-rc7a.onrender.com/Store?q=${filterData}`)
                     setProducts(result.data)
                     setIsLoading(false)
                 }catch(Err) {console.log(Err)}

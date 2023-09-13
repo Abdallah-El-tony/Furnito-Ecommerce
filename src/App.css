@@ -454,3 +454,12 @@ ul.order-summary__content input[type="text"]:focus {
   }
   
 }
+@media (max-width:575px) {
+  h2 {
+    font-size:24px !important;
+  }
+  .story__text h2 {
+    margin:0px 10px !important;
+    line-height: 22px !important;
+  }
+}

@@ -8,7 +8,7 @@ const ProductSuggustion = ({value , hideShearchField}) => {
   useEffect(()=>{
     const getSuggestions = async()=>{
       try {
-        const result = await axios.get(`http://localhost:3000/Store?q=${value}`)
+        const result = await axios.get(`https://my-server-rc7a.onrender.com/Store?q=${value}`)
         setsuggestions(result.data)
       }catch(err) {
         console.log(err)

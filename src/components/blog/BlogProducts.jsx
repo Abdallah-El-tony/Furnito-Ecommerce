@@ -25,13 +25,13 @@ const BlogProducts = ({filterData , resetData , getSort ,isSort}) => {
         let result;
         const getProductds = async()=>{
             try {
-                if(filterData === '' || filterData === undefined) {
-                    result = await axios.get(`http://localhost:3000/Blogs`)
+                if(filterData === '' || filterData === undefined || filterData === 'All') {
+                    result = await axios.get(`https://my-server-rc7a.onrender.com/Blogs`)
                 }else if (isSort) {
-                    result = await axios.get(`http://localhost:3000/Blogs?_sort=${filterData}&_order=asc`)
+                    result = await axios.get(`https://my-server-rc7a.onrender.com/Blogs?_sort=${filterData}&_order=asc`)
                 }
                 else
-                 result = await axios.get(`http://localhost:3000/Blogs?q=${filterData}`)
+                 result = await axios.get(`https://my-server-rc7a.onrender.com/Blogs?q=${filterData}`)
                     setProducts(result.data)
                     setIsLoading(false)
                 }catch(Err) {console.log(Err)}

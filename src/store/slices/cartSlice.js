@@ -6,13 +6,13 @@ const initialState = {
 }
 
 export const getCartData = createAsyncThunk('cart/getCartData',async(id,thunckAPI)=>{
-    const response = await axios.get('http://localhost:3000/users/'+id)
+    const response = await axios.get('https://my-server-rc7a.onrender.com/users/'+id)
     return response.data;
 })
 
 
 export const updateCartData = createAsyncThunk('cart/updateCartData',async(data)=>{
-   await axios.patch('http://localhost:3000/users/'+data.id , {
+   await axios.patch('https://my-server-rc7a.onrender.com/users/'+data.id , {
         cart:data.cart
 
     },{

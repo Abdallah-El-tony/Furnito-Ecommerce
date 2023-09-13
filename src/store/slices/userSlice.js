@@ -5,12 +5,12 @@ const initialState = {
 }
 
 export const getUsers = createAsyncThunk('user/getUsers',async()=>{
-    const response = await axios.get('http://localhost:3000/users')
+    const response = await axios.get('https://my-server-rc7a.onrender.com/users')
     return response.data
 })
 
 export const addUser = createAsyncThunk('user/addUser',async(user,thunkAPI)=>{
-    const response = await axios.post('http://localhost:3000/users',user,{
+    const response = await axios.post('https://my-server-rc7a.onrender.com/users',user,{
         headers: {
             'Content-Type': 'application/json',
           },

@@ -21,7 +21,7 @@ const BlogAccordions = ({getCategory , getTag}) => {
     useEffect(()=>{
         const getCatigories = async()=>{
             try {
-                const result = await axios.get('http://localhost:3000/Blogs')
+                const result = await axios.get('https://my-server-rc7a.onrender.com/Blogs')
                 setCategories(result.data)
             }catch(err) {
                 console.log(err)

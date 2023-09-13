@@ -35,7 +35,7 @@ const AccordinItems = ({getCategory , getPrice , getTag , getRate ,getColor}) =>
     useEffect(()=>{
         const getCatigories = async()=>{
             try {
-                const result = await axios.get('http://localhost:3000/Catigory')
+                const result = await axios.get('https://my-server-rc7a.onrender.com/Catigory')
                 setCategories(result.data)
             }catch(err) {
                 console.log(err)

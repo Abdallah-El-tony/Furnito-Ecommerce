@@ -11,7 +11,7 @@ const WishList = () => {
         <button>{<SuitHeart size={23}/>}</button>
         <span className='circle'>{wishlist.length}</span>
         <div className='popup'>
-            {wishlist.length < 1?
+            {wishlist?.length < 1?
             'No Item In Wishlist'
             :
             <div className='items_container'>

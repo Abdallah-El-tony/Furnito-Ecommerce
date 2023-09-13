@@ -5,14 +5,14 @@ const initialState = {
     wishlist :[]
 }
 
-export const getWishlistData = createAsyncThunk('cart/getCartData',async(id,thunckAPI)=>{
-    const response = await axios.get('http://localhost:3000/users/'+id)
+export const getWishlistData = createAsyncThunk('wishlist/getWishlistData',async(id,thunckAPI)=>{
+    const response = await axios.get('https://my-server-rc7a.onrender.com/users/'+id)
     return response.data;
 })
 
 
-export const updateWishlistData = createAsyncThunk('cart/updateCartData',async(data)=>{
-   await axios.patch('http://localhost:3000/users/'+data.id , {
+export const updateWishlistData = createAsyncThunk('wishlist/updateCartData',async(data)=>{
+   await axios.patch('https://my-server-rc7a.onrender.com/users/'+data.id , {
         wishlist:data.wishlist
 
     },{

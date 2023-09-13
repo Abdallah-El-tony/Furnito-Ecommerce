@@ -6,7 +6,7 @@ const OurTeam = () => {
     const [team,setTeam] =useState([])
     useEffect(()=>{
         const getTeam = async()=>{
-            const result = await axios.get('http://localhost:3000/Team')
+            const result = await axios.get('https://my-server-rc7a.onrender.com/Team')
             setTeam(result.data)
         }
         getTeam()

@@ -9,7 +9,7 @@ const TrendyProduct = () => {
   useEffect(()=>{
     const getProducts = async()=>{
       try {
-        const result = await axios.get('http://localhost:3000/TrendyProducts')
+        const result = await axios.get('https://my-server-rc7a.onrender.com/TrendyProducts')
         setProducts(result.data)
       }catch(err) {
         console.log(err)

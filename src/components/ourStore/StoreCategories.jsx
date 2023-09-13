@@ -7,7 +7,7 @@ const StoreCategories = ({setCurrentCaetegory}) => {
     useEffect(()=>{
         const getCategories = async()=>{
             try{
-                const result = await axios.get('http://localhost:3000/Catigory')
+                const result = await axios.get('https://my-server-rc7a.onrender.com/Catigory')
                 setCategories(result.data)
             }catch(err){
                 return err.message
