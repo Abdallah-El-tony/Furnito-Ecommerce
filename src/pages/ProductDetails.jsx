@@ -1,29 +1,39 @@
 import React, { useEffect, useState } from 'react'
-import { BreadCrumb, CustomCarousel , TapsDetails} from '../components'
+import { BreadCrumb, CustomCarousel , Loader, TapsDetails} from '../components'
 import axios from 'axios'
 import SingleProductDetails from '../components/SingleProductDetails'
 import { useParams } from 'react-router-dom'
 import { useGetLocation } from '../hooks/useGetLocation'
 import '../components/customCarousel/carousel.css'
+import { useSelector } from 'react-redux'
 
 const ProductDetails = () => {
+  const {loading}  = useSelector(state=>state.LoaderReducer)
   let {id} = useParams();
   id = id.match(/\d+/g)[0];
   const [targetProduct , setTargetProduct] = useState({})
   const [filtredProducts,setFiltredProducts]=useState([])
+  const [isLoading , setIsLoading] = useState(loading)
   useGetLocation(id)
 
   useEffect(()=>{
     let result;
     const getTargetProduct = async()=>{
-      if(Number(id) >= 22 ) {
-        result = await axios.get(`https://my-server-rc7a.onrender.com/TrendyProducts/${id}`)
-      }else {
-        result = await axios.get(`https://my-server-rc7a.onrender.com/Store/${id}`)
+      try {
+        setIsLoading(true)
+        if(Number(id) >= 22 ) {
+          result = await axios.get(`https://my-server-rc7a.onrender.com/TrendyProducts/${id}`)
+        }else {
+          result = await axios.get(`https://my-server-rc7a.onrender.com/Store/${id}`)
+        }
+        const response = await axios.get(`https://my-server-rc7a.onrender.com/Store?catigory=${result.data.catigory}`)
+        setTargetProduct(result.data)
+        setFiltredProducts(response.data)
+        setIsLoading(false)
+
+      } catch (error) {
+        console.log('error')
       }
-      const response = await axios.get(`https://my-server-rc7a.onrender.com/Store?catigory=${result.data.catigory}`)
-      setTargetProduct(result.data)
-      setFiltredProducts(response.data)
     }
     getTargetProduct()
     window.scrollTo({
@@ -36,6 +46,7 @@ const ProductDetails = () => {
       <BreadCrumb title={targetProduct.name}/>
       <section className='my-5 py-4 overflow-hidden'>
         <div className="container">
+          {isLoading && <Loader/>}
           <SingleProductDetails 
             id={targetProduct.id}
             img={targetProduct.img}

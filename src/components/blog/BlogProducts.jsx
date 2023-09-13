@@ -40,7 +40,7 @@ const BlogProducts = ({filterData , resetData , getSort ,isSort}) => {
     },[filterData, isSort, products.length])
   return (
    <>
-    {isloading?<Loader/>:<div className="product-container">
+    {isloading?<div className='shop-loader'><Loader/></div>:<div className="product-container">
    <div className="row ms-md-0 ms-md-5 justify-content-center">
             <ShopHeader setIsVirtical={setIsVirtical} filterSelected={filterData} currentDataLenght={products.length} resetData={resetData} isBlog={true} getSort={getSortValue}/>
 
