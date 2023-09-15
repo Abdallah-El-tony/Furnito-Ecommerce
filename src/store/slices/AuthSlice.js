@@ -1,9 +1,13 @@
+
+import { getUsers } from "./userSlice";
+
 const { createSlice } = require("@reduxjs/toolkit");
 const initialState= {
     isAuth:JSON.parse(localStorage.getItem('isAuth')),
     userId:JSON.parse(localStorage.getItem('userId')),
-    totalUsers:JSON.parse(localStorage.getItem('totalUsers'))
+    totalUsers:JSON.parse(localStorage.getItem('totalUsers')) || getUsers().length
 }
+
 const AuthSlice = createSlice ({
     name:'auth',
     initialState,

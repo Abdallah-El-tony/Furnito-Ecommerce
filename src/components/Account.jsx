@@ -1,14 +1,26 @@
+
+// ** Icons
 import {Person} from 'react-bootstrap-icons'
+
+// ** react router
 import { Link } from 'react-router-dom'
+
+// ** redux
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthActions } from '../store/slices/AuthSlice';
+
 const Account = () => {
 
-const {isAuth} = useSelector(state=>state.AuthReducer)
+  // ** hooks
+  const {isAuth} = useSelector(state=>state.AuthReducer)
 
+  // ** redux
   const {logout} = AuthActions;
   const dispatch = useDispatch()
+
   const logOut = ()=>{
+    
+    // redux
     dispatch(logout())
     window.location.reload()
   }

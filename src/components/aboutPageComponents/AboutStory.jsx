@@ -1,6 +1,11 @@
+// ** images import
 import storyImg from '../../assets/images/main-images/about01.jpg'
+
+// ** css
 import './about.css'
+
 const AboutStory = () => {
+  
   return (
     <section className='about__story'>
       <div className="container">

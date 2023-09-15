@@ -1,14 +1,30 @@
-import React, { useState } from 'react'
+// ** react hooks
+import { useState } from 'react'
+import { useNavigate } from 'react-router'
+
+// ** Icons
 import { Plus , Dash , X } from 'react-bootstrap-icons'
 import { cartAtions, updateCartData } from '../../store/slices/cartSlice'
+
+// ** css
 import './cart.css'
+
+// ** redux
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+
+// ** components
 import Sign from '../Sign'
 
 const CartList = ({items}) => {
-    
 
+    // store 
+    const {increase,decrease , change , removeItem , clearAll} = cartAtions
+
+    // ** Hooks 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    
+    // ** states
     const [sign,setSign] = useState(null)
     const {userId} = useSelector(state=>state.AuthReducer)
     const {cartList} = useSelector(state=>state.Cart)
@@ -17,15 +33,11 @@ const CartList = ({items}) => {
         setSign(ref)
     }
     const showSign = ()=>{
-
         sign.classList.add('show-sign')
         setTimeout(()=>{
             sign.classList.remove('show-sign')
         },2000)
     }
-    const navigate = useNavigate()
-    const {increase,decrease , change , removeItem , clearAll} = cartAtions
-    const dispatch = useDispatch()
 
     const amountHandler = (e,item)=>{
        dispatch(change(item))

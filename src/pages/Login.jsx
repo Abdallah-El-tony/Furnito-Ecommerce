@@ -1,9 +1,16 @@
+// ** Components
 import BreadCrump from '../components/BreadCrumb'
-import { useGetLocation } from '../hooks/useGetLocation'
 import { LoginForm } from '../components'
 
+// ** Hook & Functions
+import { useGetLocation } from '../hooks/useGetLocation'
+
+
 const Login = () => {
+
+  // Chang wet Title
   useGetLocation()
+
   return (
     <>
       <BreadCrump title='User Login' url='login'/>

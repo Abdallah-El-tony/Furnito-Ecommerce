@@ -1,12 +1,17 @@
-import './slider.css'
 
+
+// ** Components
 import { sliderProducts } from '../../constants'
 import SliderItem from './SliderItem'
 import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
+// ** css
+import 'react-alice-carousel/lib/alice-carousel.css';
+import './slider.css'
 
 const Slides = () => {
+
+  // ** vars
   const items=[]
     for(let i=1; i<sliderProducts.length-1; i++) {
         items.push(<SliderItem 

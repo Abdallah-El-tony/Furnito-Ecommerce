@@ -1,10 +1,16 @@
+// ** Components
 import { BrandArea, BreadCrumb } from "../components"
 import ContactInfo from "../components/contactPageComponents/ContactInfo"
 import Form from "../components/contactPageComponents/Form"
+
+// ** Hooks import
 import { useGetLocation } from '../hooks/useGetLocation'
 
 const Contact = () => {
+
+  // ** Hooks
   useGetLocation()
+  
   return (
     <>
       <BreadCrumb title="Contact" url='contact'/>

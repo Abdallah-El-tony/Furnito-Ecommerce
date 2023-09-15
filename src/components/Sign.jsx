@@ -1,11 +1,16 @@
-import React, { useEffect, useRef} from 'react'
+// ** hooks
+import { useEffect, useRef} from 'react'
+
+// ** Icons
 import { Check, X } from 'react-bootstrap-icons'
 
 
 const Sign= ({handleRef , title , descreption ,signType}) => {
 
-const signRef = useRef() 
-const progressRef = useRef()
+  // ** hooks
+  const signRef = useRef() 
+  const progressRef = useRef()
+  
   useEffect(() => {
     if(signType === 'warning') {
       signRef.current.classList.add('warning-bg')

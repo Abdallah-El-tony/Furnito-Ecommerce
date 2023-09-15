@@ -1,6 +1,8 @@
+// ** css
 import './about.css'
 
 const Member = ({person,name,job}) => {
+  
   return (
     <div className='member__card'>
         <div className="card__content p-4">

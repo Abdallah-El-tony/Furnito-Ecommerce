@@ -1,17 +1,26 @@
+// ** Icons
 import { X , BorderAll } from "react-bootstrap-icons"
 import CustomSelect from "./CustomSelect"
 import { StarFill } from "react-bootstrap-icons"
+
+// Hooks
 import { useRef} from "react"
+
+
 const ShopHeader = ({setIsVirtical , filterSelected ,currentDataLenght ,resetData , getSort , isBlog}) => {
 
     // Hooks ** 
     const filterRef = useRef()
 
+
+    // ** vars
     let isPrice = false;
     let isRate = false;
 
     isPrice = (/\d{2,}/.test(filterSelected));  // check if filterdata is price
     isRate = (/\d{1}/.test(filterSelected)); // check if filter data is rating
+
+    // functions
     const handleChangeBg = (e)=> {
         document.querySelector('.btn-active').classList.remove('btn-active')
         e.target.classList.toggle('btn-active')
@@ -25,6 +34,8 @@ const ShopHeader = ({setIsVirtical , filterSelected ,currentDataLenght ,resetDat
     const getSortValue = (sort)=>{
         getSort(sort)
     }
+
+
   return (
     <div className="row mb-5 ms-1 me-sm-0 justify-content-between flex-wrap ps-2 ps-md-0 pe-2 align-items-center">
         <div className="col-12 col-md-6 my-3 my-md-0 p-0">

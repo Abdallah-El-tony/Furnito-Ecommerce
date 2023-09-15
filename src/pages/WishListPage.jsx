@@ -1,11 +1,18 @@
-import React from 'react'
+// ** Components
 import { BreadCrumb } from '../components'
-import { useGetLocation } from '../hooks/useGetLocation'
-import { useDispatch, useSelector } from 'react-redux'
 import { WishlistActions } from '../store/slices/wishes'
 
+// ** custom Hook
+import { useGetLocation } from '../hooks/useGetLocation'
+
+// ** redux
+import { useDispatch, useSelector } from 'react-redux'
+
+
 const WishListPage = () => {
+
   useGetLocation()
+  
   const {removeWishlistItem} = WishlistActions;
   const dispatch = useDispatch()
 

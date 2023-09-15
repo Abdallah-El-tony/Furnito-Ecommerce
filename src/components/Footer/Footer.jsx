@@ -1,10 +1,19 @@
+// ** images imports
 import logo from '../../assets/images/logos/main-logo.png'
-import { Telephone , Envelope , HouseDoor , ChevronRight , Facebook , Twitter , Youtube , Instagram} from 'react-bootstrap-icons'
-import { NavLinks , Services } from '../../constants'
 import payments from '../../assets/images/main-images/png1672834115.png'
 
+// ** icons
+import { Telephone , Envelope , HouseDoor , ChevronRight , Facebook , Twitter , Youtube , Instagram} from 'react-bootstrap-icons'
+
+// constans imports
+import { NavLinks , Services } from '../../constants'
+
+// ** css
 import './footer.css'
+
+// ** react router
 import { Link } from 'react-router-dom'
+
 const Footer = () => {
   return (
     <footer>

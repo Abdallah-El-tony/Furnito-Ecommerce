@@ -1,14 +1,22 @@
-import { useDispatch, useSelector } from 'react-redux'
+// ** Components
 import { BreadCrumb } from '../components'
 import { CompareActions } from '../store/slices/compareProductSlice'
+
+// ** Hooks
 import { useGetLocation } from '../hooks/useGetLocation'
+import { useDispatch, useSelector } from 'react-redux'
 
 const CompoareProdcut = () => {
-  useGetLocation()
-  const {compareList} = useSelector(state=>state.Compare)
+
   const dispatch = useDispatch()
 
+  // ** Hooks
+  useGetLocation()
+
+  // ** store
+  const {compareList} = useSelector(state=>state.Compare)
   const {removProduct} = CompareActions
+
   const removeProductHandler = (item)=>{
   dispatch(removProduct(item))
   }

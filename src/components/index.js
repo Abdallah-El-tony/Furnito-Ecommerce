@@ -1,3 +1,5 @@
+
+// ** all component imports
 import Navbar from "./Navbar/Navbar"
 import Account from "./Account"
 import WishList from "./WishList"

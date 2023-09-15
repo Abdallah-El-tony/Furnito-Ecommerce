@@ -1,8 +1,14 @@
+// ** Components
 import BreadCrump from '../components/BreadCrumb'
+
+// ** Hooks
 import { useGetLocation } from '../hooks/useGetLocation'
 
 const OrderTrack = () => {
+
+  // ** change Web Title
   useGetLocation()
+  
   return (
     <>
     <BreadCrump title='Order Track' url='ordertrack'/>

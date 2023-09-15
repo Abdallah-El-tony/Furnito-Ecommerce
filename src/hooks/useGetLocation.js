@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export const useGetLocation = (id) => {
+        
   const location = useLocation();
 
   const getPageTitleFromPathname = (pathname) => {
+
     // Logic to determine the page title based on the pathname
     if (pathname === '/') {
       return 'Home - Furnito';
@@ -64,6 +66,8 @@ export const useGetLocation = (id) => {
     const { pathname } = location;
     const pageTitle = getPageTitleFromPathname(pathname);
 
-    document.title = pageTitle; // Update the document title
+     // Update the document title
+    document.title = pageTitle; 
+   
   }, [location]);
 };

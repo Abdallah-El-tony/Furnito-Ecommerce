@@ -1,6 +1,8 @@
-import React from 'react'
+// ** css
 import './collection.css'
+// ** react router
 import { Link } from 'react-router-dom'
+
 const CollectionPart = ({title,img,containerStyle}) => {
   return (
         <div className="col-12 col-lg-6">

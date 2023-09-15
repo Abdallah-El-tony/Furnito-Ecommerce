@@ -1,7 +1,14 @@
 import Slider from 'react-slick'
+
+// ** axios import
 import axios from 'axios';
+
+// react Hooks impmorts
 import { useEffect, useState } from 'react';
+
+// ** Components
 import Member from './Member';
+
 const OurTeam = () => {
     const [team,setTeam] =useState([])
     useEffect(()=>{

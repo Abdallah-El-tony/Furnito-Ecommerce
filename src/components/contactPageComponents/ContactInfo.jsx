@@ -1,5 +1,9 @@
+// ** icons
 import { Telephone ,Envelope , Geo } from "react-bootstrap-icons"
+
+// ** css
 import './contact.css'
+
 const ContactInfo = () => {
   return (
     <div className="col-md-4">

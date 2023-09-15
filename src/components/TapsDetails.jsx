@@ -1,7 +1,16 @@
-import React, { useRef, useState } from 'react'
+
+// ** Hooks
+import { useRef, useState } from 'react'
+
+// ** Components
 import {Tabs} from '../constants/index'
+
+// ** css
 import './ourStore/store.css'
+
 const TapsDetails = () => {
+
+    // ** hooks
     const contentRef = useRef()
     const [content,setContent] = useState({
         target:'Description',
@@ -19,8 +28,6 @@ const TapsDetails = () => {
 
     const handleClick=(el,i)=>{
         setContent(Tabs[i])
-        // document.querySelector('.show-content').classList.remove('show-content')
-        // contentRef.current.classList.add('show-content')
         
         if(contentRef.current.classList.contains('show-content')){
             contentRef.current.classList.remove('show-content')

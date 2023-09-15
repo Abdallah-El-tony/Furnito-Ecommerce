@@ -1,11 +1,17 @@
+// ** Components
 import CustomBtn from './CustomBtn'
+import Sign from './Sign'
+// ** Icons
 import { Cart , SuitHeart ,Eye, ArrowRepeat } from 'react-bootstrap-icons'
+
+// ** hooks
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { cartAtions} from '../store/slices/cartSlice'
-import Sign from './Sign'
-import { CompareActions } from '../store/slices/compareProductSlice'
 import { useState } from 'react'
+
+// ** store
+import { cartAtions} from '../store/slices/cartSlice'
+import { CompareActions } from '../store/slices/compareProductSlice'
 import { WishlistActions } from '../store/slices/wishes'
 
 const TrendySingleProduct = ({img,title,sales,price,altPrice ,id, customStyle , isSlider ,hasBtn , isBlog ,date , object , descount}) => {

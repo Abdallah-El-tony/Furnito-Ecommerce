@@ -1,8 +1,15 @@
+// ** Components
 import {Cart} from 'react-bootstrap-icons'
-import '../components/cart/cart.css'
 import CartItem from './cart/CartItem'
 import CustomBtn from './CustomBtn'
+
+// ** css
+import '../components/cart/cart.css'
+
+// ** redux
 import { useSelector } from 'react-redux'
+
+// ** css
 import '../components/cart/cart.css'
 
 const CartItems = () => {
@@ -11,6 +18,8 @@ const CartItems = () => {
   
   var total  = 0;
   cartList.forEach(item=>{
+
+    //calculate the total price
     total+=parseFloat(item.price.replace('$', '').replace(',', '')) * item.quantity;
   })
   return (

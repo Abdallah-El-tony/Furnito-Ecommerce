@@ -1,6 +1,13 @@
+// ** Icons
 import { Search , X} from 'react-bootstrap-icons';
+
+// ** hooks
 import { useRef, useState } from 'react';
+
+// ** Components
 import ProductSuggustion from './ProductSuggustion';
+
+// ** css
 import './ourStore/store.css'
 
 const SearchBtn = () => {

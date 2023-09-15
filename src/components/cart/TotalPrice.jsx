@@ -1,14 +1,25 @@
-import React from 'react'
+// ** components
 import CustomBtn from '../CustomBtn'
+
+// ** css
 import './cart.css'
+
+// react hooks
 import { useSelector } from 'react-redux'
 
 const TotalPrice = () => {
+
+  //** redux */
   const {cartList} = useSelector(state=>state.Cart)
+
+  // ** vars
   var total  = 0;
+
+  // ** calculate total price
   cartList.forEach(item=>{
     total+=parseFloat(item.price.replace('$', '').replace(',', '')) * item.quantity;
   })
+
   return (
     <div className="cart__total border mt-4 mt-xl-0">
         <div className="row">

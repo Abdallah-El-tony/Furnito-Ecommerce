@@ -1,7 +1,10 @@
-import React from 'react'
+// ** Components
 import CollectionPart from './CollectionPart'
+
+// ** images imports
 import chair from '../../assets/images/main-images/chair.png'
 import flower from '../../assets/images/main-images/flours.png'
+
 const Collections = () => {
   return (
     <section className="collections my-4 py-4">

@@ -1,9 +1,12 @@
-import React from 'react'
+// ** css
 import './shop.css'
 
 const Colors = ({handleGetColor}) => {
+
   const handleClick = (e,color)=>{
     handleGetColor(color)
+
+    // vars
     let elements = document.querySelectorAll('.colors span')
     
       elements.forEach(item=>{

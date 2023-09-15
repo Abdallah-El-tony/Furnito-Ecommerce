@@ -1,6 +1,9 @@
-import React from 'react'
+// ** Components
 import CustomBtn from './CustomBtn'
+
+// ** images
 import bannerImg from '../assets/images/main-images/arrival11669021970.png'
+
 const Bannar = () => {
   return (
     <section className='py-4 mx-3 mx-md-4 bg-main-bg'>

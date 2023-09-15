@@ -1,5 +1,7 @@
-import React from 'react'
+// ** Components
 import SingleCount from './SingleCount'
+
+// ** css
 import './about.css'
 
 const Counts = () => {

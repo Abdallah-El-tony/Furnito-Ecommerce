@@ -1,13 +1,24 @@
+
+// react hooks
 import { useRef } from 'react'
 import {useState} from 'react'
+
+// ** icons
 import { ChevronDown ,ChevronUp } from 'react-bootstrap-icons'
+
+// ** css
 import './shop.css'
+
 const CustomSelect = ({getSortValue ,isBlog}) => {
+
+    // ** states
     const [isShowed,setIsShowed] = useState(false)
     const [value,setValue] = useState(`${isBlog?'Sort By Descending':'Sort By Date'}`)
     const formRef = useRef(null)
     const filterBtn = useRef(null)
 
+
+    // functions
     const handleClick = (e)=>{
         setIsShowed(!setIsShowed) 
        formRef.current.classList.toggle('show-select')
@@ -22,6 +33,7 @@ const CustomSelect = ({getSortValue ,isBlog}) => {
         setValue(e.target.textContent)
         getSortValue(fileter)
     }
+    
   return (
     <div>
         <button ref={filterBtn} onClick={handleClick} className='border-1 text-secondary bg-transparent rounded p-2 px-3 position-relative'>{value} {isShowed?<ChevronUp size={12}/>:<ChevronDown size={12}/>}

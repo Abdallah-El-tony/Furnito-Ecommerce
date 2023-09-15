@@ -1,11 +1,20 @@
+// ** css
 import './Navbar/navbar.css'
+
+// ** Icons
 import {SuitHeart} from 'react-bootstrap-icons'
+
+// ** redux
 import { useSelector } from 'react-redux'
+
+// ** Components
 import CartItem from './cart/CartItem'
 import CustomBtn from './CustomBtn'
 
 const WishList = () => {
+  // ** hook
   const {wishlist}  = useSelector(state=>state.Wishlist)
+  
   return (
     <li className='position-relative wishlist'>
         <button>{<SuitHeart size={23}/>}</button>

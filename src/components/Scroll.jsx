@@ -1,7 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+
+// ** hooks
+import { useEffect, useRef, useState } from 'react'
 import { ChevronUp } from 'react-bootstrap-icons'
 
 const Scroll = () => {
+
+  // Hooks
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const scrollRef = useRef(null)
 

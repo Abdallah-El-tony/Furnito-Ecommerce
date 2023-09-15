@@ -1,5 +1,7 @@
-import React from 'react'
+
+// ** css
 import './slider.css'
+
 const SliderItem = ({img,name,items}) => {
   return (
     <div className='Slider__item text-center border mx-3 p-4'>

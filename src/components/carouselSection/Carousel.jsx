@@ -1,12 +1,19 @@
-import React from 'react'
+// ** css
 import "../carouselSection/carousel.css"
+
+// ** Components
 import CustomBtn from '../CustomBtn'
+
+// ** bootstrap Icons
 import {ChevronLeft} from "react-bootstrap-icons"
 import {ChevronRight} from "react-bootstrap-icons"
-import carouselImg from '../../assets/images/main-images/landing-img.png'
-const Carousel = () => {
-  return (
 
+// ** images import
+import carouselImg from '../../assets/images/main-images/landing-img.png'
+
+const Carousel = () => {
+  
+  return (
     <div className="carousel-section">
         <div className="container position-relative">
           <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">

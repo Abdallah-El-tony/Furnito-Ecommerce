@@ -1,9 +1,16 @@
+// axios import
 import axios from 'axios'
-import React, { useState } from 'react'
+
+// ** react imports
+import { useState } from 'react'
 import { useEffect } from 'react'
 import Slider from 'react-slick'
+
+// Components
 import Client from './Client'
 const Clients = () => {
+
+    // ** Hooks
     const [feedbacks,setFeedbacks] = useState([])
     useEffect(()=>{
         const getTestimonials = async()=>{
@@ -11,7 +18,9 @@ const Clients = () => {
             setFeedbacks(result.data)
 
         }
+
         getTestimonials()
+        
     },[])
         var settings = {
           dots: true,

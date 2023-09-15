@@ -1,28 +1,40 @@
+
+// ** Icons
 import { Plus , Dash , ArrowRepeat ,Share ,Gift, SuitHeart } from "react-bootstrap-icons"
+
+// ** redux
 import { useDispatch, useSelector } from "react-redux"
 import { cartAtions } from "../store/slices/cartSlice"
+
+// ** Hooks
 import { useState } from "react"
-import '../components/ourStore/store.css'
-import Sign from "./Sign"
 import { useNavigate } from "react-router"
+
+// ** css
+import '../components/ourStore/store.css'
+
+// ** Components
+import Sign from "./Sign"
 import { WishlistActions } from "../store/slices/wishes"
 import { CompareActions } from "../store/slices/compareProductSlice"
 import ShareIcons from "./ShareIcons"
+
+// ** css
 import './wishlist/wishlist.css'
 
 const SingleProductDetails = ({img,name,price,altPrice,sales , object}) => {
+
+    // ** store
     const {addWishlistItem} = WishlistActions;
     const {addProdcut} = CompareActions;
     const {isAuth} = useSelector(state=>state.AuthReducer)
 
-    
-
-
+    // ** states
     const [signTitle , setSignTitle] = useState('')
     const [signDesc , setSignDesc] = useState('')
     const [signType,setSignType] = useState('success')
-
     const [sign,setSign] = useState(null)
+    
     const handleRef = (ref)=>{
         setSign(ref)
     }

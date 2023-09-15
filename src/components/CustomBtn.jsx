@@ -1,16 +1,23 @@
-import React from 'react'
+// ** redux
 import { useDispatch } from 'react-redux'
+
+// ** Hooks
 import { useNavigate } from 'react-router-dom'
+
+// ** store
 import { cartAtions } from '../store/slices/cartSlice'
 
 const CustomBtn = ({title , styleContainer , object , signRef , onClick , setSignType}) => {
+
   const item = {...object,quantity:1}
 
+  // ** hooks
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const {addItem} = cartAtions;
 
-  const navigate = useNavigate()
+  
   
   const handleNavigate = (e)=>{
 

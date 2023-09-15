@@ -1,10 +1,15 @@
-
+// alice slider libiray
 import AliceCarousel from 'react-alice-carousel';
+
+// ** css
 import 'react-alice-carousel/lib/alice-carousel.css';
+
+// ** Components
 import TrendySingleProduct from '../TrendySingleProduct';
 
 const CustomCarousel = ({products}) => {
 
+    // ** vars
     const items=[]
     for(let i=1; i<products.length-1; i++) {
         items.push(<TrendySingleProduct 

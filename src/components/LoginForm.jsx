@@ -1,20 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+// ** hooks
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
-import { AuthActions } from '../store/slices/AuthSlice'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
+
+// ** redux
+import { useDispatch, useSelector } from 'react-redux'
+import { AuthActions } from '../store/slices/AuthSlice'
+
+// ** axios import
+import axios from 'axios'
+
 
 const LoginForm = ({customStyle}) => {
 
+    // ** hooks
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
+    // store
     const {userId} = useSelector(state=>state.AuthReducer)
-  
     const {users} = useSelector(state=>state.userReducer)
     const {login} =AuthActions;
+
+    // ** stats
     const [UsersData,setUsersData] = useState([])
-    // const [isChecked,setIsChecked] = useState(false)
     const [isFound , setIsFound] = useState(true)
   
     const [user,setUser] = useState({

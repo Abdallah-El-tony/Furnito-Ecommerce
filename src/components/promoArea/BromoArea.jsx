@@ -1,4 +1,7 @@
+
+//** Icons */
 import { Truck , ArrowClockwise, Lock , Gift } from "react-bootstrap-icons"
+
 const BromoArea = () => {
   return (
     <section className='promo-area py-5 my-3'>

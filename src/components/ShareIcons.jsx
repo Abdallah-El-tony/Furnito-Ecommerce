@@ -1,5 +1,7 @@
-import React from 'react'
+// ** Icons
 import { Facebook , Twitter , Linkedin, Pinterest } from 'react-bootstrap-icons'
+
+// ** css
 import './wishlist/wishlist.css'
 
 const ShareIcons = () => {

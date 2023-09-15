@@ -1,11 +1,23 @@
+
+// ** Components
 import TrendySingleProduct from "../TrendySingleProduct"
+
+// ** css
 import './trendyProduct.css'
+
+// ** hooks
 import { useEffect, useState } from "react"
+
+// ** axios import
 import axios from "axios"
+
 const TrendyProduct = () => {
 
+  // ** hooks
   const [porducts,setProducts] = useState([])
 
+
+  // ** fethch apis
   useEffect(()=>{
     const getProducts = async()=>{
       try {
@@ -17,6 +29,7 @@ const TrendyProduct = () => {
     }
     getProducts()
   },[])
+  
   return (
     <section className='trendy-products py-4'>
         <div className="container">

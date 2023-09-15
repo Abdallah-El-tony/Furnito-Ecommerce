@@ -1,3 +1,5 @@
+
+// ** all about components
 import AboutStory from "./AboutStory";
 import Clients from "./Clients";
 import Client from "./Client";

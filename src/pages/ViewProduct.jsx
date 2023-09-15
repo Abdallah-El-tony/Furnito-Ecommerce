@@ -1,16 +1,31 @@
-import React, { useEffect, useState } from 'react'
+// ** Components
 import SingleProductDetails from '../components/SingleProductDetails'
+
+
+// ** react import
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+
+// ** bootstrap Icons
 import { X } from 'react-bootstrap-icons';
+
+// ** axios import
 import axios from 'axios';
+
+// custom Hooks import
 import { useGetLocation } from '../hooks/useGetLocation'
   
 const ViewProduct = () => {
+
     useGetLocation()
+    
+    // ** vars
     let {id} = useParams();
     id = id.match(/\d+/g)[0];
-    const [targetProduct , setTargetProduct] = useState({})
 
+    // Hooks
+    const [targetProduct , setTargetProduct] = useState({})
+    
     useEffect(()=>{
       let result;
       const getTargetProduct = async()=>{
@@ -23,6 +38,7 @@ const ViewProduct = () => {
       }
       getTargetProduct()
     },[id])
+
 
   return (
     <section className='py-4 overflow-hidden w-100 mt-0' style={{position:'absolute' , top:'0'}}>

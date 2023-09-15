@@ -1,22 +1,37 @@
-import React, { useState } from 'react'
+// ** Components
+import { BreadCrumb ,SelectBox} from '../components'
+
+// ** react imports
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
-import { BreadCrumb ,SelectBox} from '../components'
+
+// rect router
 import { Link, useNavigate } from 'react-router-dom'
+
+// redux
 import { useDispatch} from 'react-redux'
 import { addUser} from '../store/slices/userSlice'
 import { AuthActions } from '../store/slices/AuthSlice'
 import { useGetLocation } from '../hooks/useGetLocation'
+
+// Hooks & custom Hooks
 import { userSchema } from '../Validations/UserValidation'
+
+// bootstrap Icons
 import { Eye , EyeSlash } from 'react-bootstrap-icons'
 
 const SignUp = () => {
+
+  // ** change web title
   useGetLocation()
 
+  // Hooks
   const {signUp} = AuthActions
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
+  // states
   const [showPassword,setShowPassword] = useState(false)
   const [user,setUser] = useState([{
     name:"",
@@ -32,6 +47,7 @@ const SignUp = () => {
     setUser({...user,[e.target.name]:e.target.value , cart:[],wishlist:[]})
   }
 
+  // form validation
   const submitHandler = ()=>{
     console.log(user.wishlist)
     delete user.confirmPassword

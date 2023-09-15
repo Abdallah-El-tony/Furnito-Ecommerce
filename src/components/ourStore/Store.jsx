@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from 'react'
+// ** react Hooks
+import { useEffect, useState } from 'react'
+
+// functions
 import StoreCategories from './StoreCategories'
+
+// components
 import TrendySingleProduct from '../TrendySingleProduct'
-import axios from 'axios'
 import Loader from '../loaders/Loader'
+
+// ** redux
 import { useSelector } from 'react-redux'
+
+// ** axios import
+import axios from 'axios'
+
 
 const Store = () => {
     const {loading} = useSelector(state=>state.LoaderReducer)

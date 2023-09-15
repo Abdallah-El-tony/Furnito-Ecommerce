@@ -1,4 +1,4 @@
-    // slider images 
+// ** slider images 
 import product1 from '../assets/images/slider-images/slider-img-1.png'
 import product2 from '../assets/images/slider-images/slider-img-2.png'
 import product3 from '../assets/images/slider-images/slider-img-3.png'
@@ -7,7 +7,7 @@ import product5 from '../assets/images/slider-images/slider-img-5.png'
 import product6 from '../assets/images/slider-images/slider-img-6.png'
 import product7 from '../assets/images/slider-images/slider-img-7.png'
 
-// payments methods imates 
+// ** payments methods images 
 import method1 from '../assets/images/logos/method-1.png'
 import method2 from '../assets/images/logos/method-2.png'
 import method3 from '../assets/images/logos/methode-3.png'
@@ -20,6 +20,9 @@ import methode9 from '../assets/images/logos/method-9.jpg'
 import method10 from '../assets/images/logos/method-10.png'
 import method11 from '../assets/images/logos/method-11.png'
 
+
+
+// ** nav links
 export const NavLinks =[
     {
         link:'Home',
@@ -47,6 +50,8 @@ export const NavLinks =[
     }
 ]
 
+
+// ** services liinks
 export const Services = [
     {
         link:'Free Shipping',
@@ -65,6 +70,8 @@ export const Services = [
         url:'/',
     }
 ]
+
+// ** slider Products
 export const sliderProducts = [
     {
         img:product1,
@@ -110,6 +117,8 @@ export const sliderProducts = [
     }
 ]
 
+
+// ** tabs btns
 export const Tabs = [
     {
         target:'Description',
@@ -151,8 +160,12 @@ export const Tabs = [
 
 ]
 
+
+// ** shop tags filters
 export const Tags = ['Table','Almirah','Bed','Cabient','Plastice Chair','Sofa','Stol','Bomby Chair','Chair']
 
+// ** Blog tags filters
 export const BlogTags = ['Tech' , 'Travel', 'Camira' , 'Watch' , 'Fashion' , 'Games' , 'Gadjet' , 'book']
 
+// payments methods
 export const methods = [method1,method2,method3,method4,method5,method6,method7,method8,method10,method11,methode9]

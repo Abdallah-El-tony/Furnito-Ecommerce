@@ -1,16 +1,25 @@
+// ** Components
 import BreadCrump from '../components/BreadCrumb'
 import SearchFilter from '../components/shop/SearchFilter'
-import '../components/shop/shop.css'
 import BlogAccordions from '../components/blog/BlogAccordions'
-import { useState } from 'react'
 import BlogProducts from '../components/blog/BlogProducts'
+
+// ** css
+import '../components/shop/shop.css'
+
+// ** functinos & Hooks
 import { useGetLocation } from '../hooks/useGetLocation'
+import { useState } from 'react'
 
 const Blog = () => {
+
+  // ** Hooks
   useGetLocation()
   const [filterData,setFilterData] = useState('')
   const [isSort , setIsSort] = useState(false)
 
+
+  // ** filter functions 
   const handleChange =(value) =>{
     setFilterData(value)
     setIsSort(false)
@@ -31,6 +40,8 @@ const Blog = () => {
     setFilterData(value)
     setIsSort(true)
   }
+
+  
   return (
     <>
       <BreadCrump title='Blogs' url='blog'/>

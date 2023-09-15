@@ -1,5 +1,6 @@
-import React from 'react'
+// ** css
 import './testimonias.css'
+
 const TestimonialCard = () => {
   return (
     <div>TestimonialCard</div>

@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from 'react'
+// react hooks
+import { useEffect, useState } from 'react'
+
+// ** Components
 import {BlogTags } from '../../constants'
+
+// css
 import '../shop/shop.css'
+
+// axios import
 import axios from 'axios'
 
 const BlogAccordions = ({getCategory , getTag}) => {
+
     const [categories, setCategories] =  useState([])
 
     const handleCategory = (e)=>{
         getCategory(e.target.textContent)
     }
+    
     const handleClick = (e)=>{
         getTag(e.target.textContent)
             if(e.target.classList.contains('hide')) {

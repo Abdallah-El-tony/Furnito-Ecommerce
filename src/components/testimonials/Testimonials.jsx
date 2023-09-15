@@ -1,12 +1,28 @@
-import React, { useEffect, useState } from 'react'
+// react hooks
+import { useEffect, useState } from 'react'
+
+// ** images imports
 import quateIcon from '../../assets/images/icons/quate-icon.png'
+
+// ** css
 import './testimonias.css'
+
+// ** Icons
 import { StarFill } from 'react-bootstrap-icons';
 import { StarHalf } from 'react-bootstrap-icons';
+
+// ** Components
 import Slider from 'react-slick';
+
+// ** axios import
 import axios from 'axios';
+
 const Testimonials = () => {
+
+  // ** hooks
     const [testimonials,setTestimonials] = useState([])
+
+    // ** fetch apis
     useEffect(()=>{
         const getTestimonials = async()=>{
             const result = await axios.get('https://my-server-rc7a.onrender.com/Clients')
@@ -14,6 +30,9 @@ const Testimonials = () => {
         }
         getTestimonials()
     },[])
+
+
+    // ** vars
         var settings = {
           dots: true,
           infinite: true,

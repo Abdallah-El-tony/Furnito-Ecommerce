@@ -1,12 +1,21 @@
+// ** axios import
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+
+// ** Hooks
+import { useEffect, useState } from 'react'
+
+// ** Components
 import TrendySignleProduct from '../TrendySingleProduct'
 import Loader from '../loaders/Loader'
 import VirticalSingleProduct from './VirticalSingleProduct'
-import './shop.css'
 import ShopHeader from './ShopHeader'
 
+// ** css
+import './shop.css'
+
 const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
+
+    // ** states
     const [products,setProducts] = useState([])
     const [isloading,setIsLoading] = useState(true)
     const [direction,setDirection] = useState('horizontal')
@@ -17,8 +26,12 @@ const ShopProducts = ({filterData , resetData , getSortValue , isSort}) => {
     const getSort = (value)=>{
         getSortValue(value)
     }
+
+    // ** vars
     let isPrice = false;
     isPrice = (/\d+/.test(filterData));
+
+    // ** fetch apis
     useEffect(()=>{
         setIsLoading(true)
         let result;

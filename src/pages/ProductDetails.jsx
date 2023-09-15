@@ -1,32 +1,54 @@
-import React, { useEffect, useState } from 'react'
+// ** Compontes
 import { BreadCrumb, CustomCarousel , Loader, TapsDetails} from '../components'
-import axios from 'axios'
 import SingleProductDetails from '../components/SingleProductDetails'
+
+// ** react Hooks & custom Hooks
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useGetLocation } from '../hooks/useGetLocation'
+
+// ** css
 import '../components/customCarousel/carousel.css'
+
+// ** axios import 
+import axios from 'axios'
+
+// ** redux  import 
 import { useSelector } from 'react-redux'
 
 const ProductDetails = () => {
+  
+  // ** store
   const {loading}  = useSelector(state=>state.LoaderReducer)
+
+  // ** vars
   let {id} = useParams();
   id = id.match(/\d+/g)[0];
+  
+  // ** states
   const [targetProduct , setTargetProduct] = useState({})
   const [filtredProducts,setFiltredProducts]=useState([])
   const [isLoading , setIsLoading] = useState(loading)
+
+  // ** change web title
   useGetLocation(id)
 
+  // fetch apis
   useEffect(()=>{
     let result;
     const getTargetProduct = async()=>{
       try {
         setIsLoading(true)
+
         if(Number(id) >= 22 ) {
           result = await axios.get(`https://my-server-rc7a.onrender.com/TrendyProducts/${id}`)
-        }else {
+        }
+        else {
           result = await axios.get(`https://my-server-rc7a.onrender.com/Store/${id}`)
         }
+
         const response = await axios.get(`https://my-server-rc7a.onrender.com/Store?catigory=${result.data.catigory}`)
+
         setTargetProduct(result.data)
         setFiltredProducts(response.data)
         setIsLoading(false)
@@ -35,12 +57,15 @@ const ProductDetails = () => {
         console.log('error')
       }
     }
+
     getTargetProduct()
+
     window.scrollTo({
       top:0,
       behavior:'smooth'
     })
   },[id])
+
   return (
     <>
       <BreadCrumb title={targetProduct.name}/>

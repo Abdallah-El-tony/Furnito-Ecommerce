@@ -1,10 +1,20 @@
-import React, { useEffect, useState } from 'react'
+// Hooks
+import { useEffect, useState } from 'react'
+
+// ** css
 import './ourStore/store.css'
+
+// ** axios
 import axios from 'axios'
+
+// ** components
 import { Link } from 'react-router-dom'
 
 const ProductSuggustion = ({value , hideShearchField}) => {
+  // states
   const [suggestions,setsuggestions] = useState([])
+
+  // ** fetch apis
   useEffect(()=>{
     const getSuggestions = async()=>{
       try {

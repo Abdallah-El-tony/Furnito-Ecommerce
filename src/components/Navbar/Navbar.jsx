@@ -1,17 +1,31 @@
 import './navbar.css'
+// ** react router imports
 import { Link } from 'react-router-dom';
+
+// ** images imports
 import logo from '../../assets/images/logos/main-logo.png'
+import togglarIcon from '../../assets/images/icons/togglar-icon.png'
+import closeIcon from '../../assets/images/icons/close-icon.png'
+
+// constants
 import {NavLinks} from '../../constants/index'
+
+// ** Icons
 import { ArrowRepeat , Cart , Person , SuitHeart } from 'react-bootstrap-icons';
+
+// ** Components
 import CartItems from '../CartItems';
 import SearchBtn from '../SearchBtn';
 import WishList from '../WishList';
 import Account from '../Account';
-import togglarIcon from '../../assets/images/icons/togglar-icon.png'
-import closeIcon from '../../assets/images/icons/close-icon.png'
-import { useState } from 'react';
-import 'animate.css';
 import Scroll from '../Scroll';
+
+// hooks
+import { useState } from 'react';
+
+// ** animate css libirary
+import 'animate.css';
+
 
 
 const Navbar = () => {

@@ -1,8 +1,17 @@
-import React, { useState } from 'react'
+ // hooks
+import { useState } from 'react'
+
+// ** components
 import { Search } from 'react-bootstrap-icons'
+
+// ** css
 import './shop.css'
+
 const SearchFilter = ({onchangeData}) => {
+
+  // ** hooks
   const [value,setValue] = useState('')
+  
   const handleFilter = (e)=>{
     setValue(e.target.value)
     onchangeData(value)

@@ -1,22 +1,40 @@
-import React, { useState } from 'react'
+
+// ** hooks
+import { useState } from 'react'
 import CartItem from './cart/CartItem'
+
+// ** redux
 import { useSelector } from 'react-redux'
+
+// ** constants
 import {methods} from '../constants'
+
+// random keies libirary
 import { v4 as uuidv4 } from 'uuid';
 
+
+// ** Components
 import CustomBtn from './CustomBtn'
 import Sign from './Sign';
 
 const OrdarSummary = () => {
+
+    // states
     const [signTitle , setSignTitle] = useState('')
     const [signDesc , setSignDesc] = useState('')
     const [sign,setSign] = useState(null)
     const [signType,setSignType] = useState('success')
+
+
     const handleRef = (ref)=>{
         setSign(ref)
     }
+
+    // store
     const {cartList} = useSelector(state=>state.Cart)
     const [isChecked , setIsChecked] = useState(false)
+
+    // ** vars
     var total  = 0;
     cartList.forEach(item=>{
       total+=parseFloat(item.price.replace('$', '').replace(',', '')) * item.quantity;

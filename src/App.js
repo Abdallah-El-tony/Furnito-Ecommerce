@@ -1,24 +1,38 @@
 import './App.css';
+
+// ** Components
 import { Footer, Navbar } from './components';
 import { Route , Routes } from 'react-router-dom';
+
+// ** Pages
 import { About, Blog, CartPage, CheckOut, CompoareProdcut, Contact, ForgetPassword, Home , Login, NotFound, OrderTrack, ProductDetails, Shop, SignUp, ViewProduct, WishListPage } from './pages';
+
+// ** redux
 import { useDispatch, useSelector } from 'react-redux';
+
+// hooks
 import { useEffect } from 'react';
+
+// store
 import { getCartData, updateCartData } from './store/slices/cartSlice';
 import { getUsers } from './store/slices/userSlice';
 import { getWishlistData, updateWishlistData } from './store/slices/wishes';
 
 
 function App() {
+
+  // store
   const {cartList} = useSelector(state=>state.Cart)
   const {wishlist} = useSelector(state=>state.Wishlist)
   const {isAuth , userId} = useSelector(state=>state.AuthReducer)
+
+  // redux
   const dispatch = useDispatch()
 
   useEffect(()=>{
 
     dispatch(getUsers())
-
+    
     if(isAuth) {
       dispatch(getCartData(userId))
       dispatch(getWishlistData(userId))

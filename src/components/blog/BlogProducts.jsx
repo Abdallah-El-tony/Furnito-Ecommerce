@@ -1,17 +1,25 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+
+// ** react hooks
+import { useEffect, useState } from 'react'
+
+// ** Components
 import TrendySignleProduct from '../TrendySingleProduct'
 import Loader from '../loaders/Loader'
 import VirticalSingleProduct from '../shop/VirticalSingleProduct'
-import '../shop/shop.css'
 import ShopHeader from '../shop/ShopHeader'
+
+// ** css
+import '../shop/shop.css'
 
 const BlogProducts = ({filterData , resetData , getSort ,isSort}) => {
     
+    // states
     const [products,setProducts] = useState([])
     const [isloading,setIsLoading] = useState(true)
     const [direction,setDirection] = useState('horizontal')
 
+    // ** functions
     const setIsVirtical = (direction)=>{
         setDirection(direction)
     }
@@ -19,7 +27,7 @@ const BlogProducts = ({filterData , resetData , getSort ,isSort}) => {
         getSort(sort)
     }
    
-    
+    //** fetch apies */
     useEffect(()=>{
         setIsLoading(true)
         let result;

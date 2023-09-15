@@ -1,11 +1,17 @@
+// ** react
 import React from 'react'
 import Slider from 'react-slick'
+
+// ** Components
 import Brand from './Brand';
+
+// ** branch imags impors
 import Brand1 from '../../assets/images/logos/brand-1.png'
 import Brand2 from '../../assets/images/logos/brand-2.png'
 import Brand3 from '../../assets/images/logos/brand-3.png'
 import Brand4 from '../../assets/images/logos/brand-4.png'
 import Brand5 from '../../assets/images/logos/brand-5.png'
+
 const brandArea = () => {
     var settings = {
       dots: true,

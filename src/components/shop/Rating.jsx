@@ -1,11 +1,19 @@
-import React from 'react'
+// ** Icons
 import { Star , StarFill} from 'react-bootstrap-icons'
+
+// ** ginirate random key libirary
 import { v4 as uuidv4 } from 'uuid';
+
 const Rates = ({ star, starFill, id ,handleChange}) => {
+
     const changeHandler = (e)=>{
         handleChange(starFill)
     }
+
+    // ** vars
     let stars = [];
+
+    // render star filled
     for (let i = 1; i < starFill + 1; i++) {
       stars.push(
         <span key={uuidv4()} className="text-warning mx-1">
@@ -13,6 +21,8 @@ const Rates = ({ star, starFill, id ,handleChange}) => {
         </span>
       );
     }
+
+    // render starts not filled
     for (let i = starFill; i < 5; i++) {
       stars.push(
         <span key={uuidv4()} className="text-warning mx-1">
@@ -20,6 +30,7 @@ const Rates = ({ star, starFill, id ,handleChange}) => {
         </span>
       );
     }
+    
     return (
       <div className="d-flex gap-3 my-2">
         <input type="radio" id={id} name="rate" className='border' style={{cursor:"pointer", width:"18px"}} onChange={changeHandler} />

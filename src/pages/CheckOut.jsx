@@ -1,7 +1,12 @@
+// ** Components
 import { LoginForm, OrdarSummary } from '../components'
 import BreadCrumb from '../components/BreadCrumb'
+
+// ** Hooks import
 import { useGetLocation } from '../hooks/useGetLocation'
 const CheckOut = () => {
+
+    // ** Hooks
     useGetLocation()
     
   return (

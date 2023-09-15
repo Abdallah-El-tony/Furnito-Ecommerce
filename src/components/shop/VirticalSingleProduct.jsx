@@ -1,27 +1,47 @@
-import React, { useState } from 'react'
+// ** hooks
+import  { useState } from 'react'
+
+// ** Icons
 import { ArrowRepeat, Eye, Heart } from 'react-bootstrap-icons'
+
+// ** components
 import CustomBtn from '../CustomBtn'
-import './shop.css'
-import Sign from '../Sign'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { CompareActions } from '../../store/slices/compareProductSlice'
 import { WishlistActions } from '../../store/slices/wishes'
+import Sign from '../Sign'
+
+// ** css
+import './shop.css'
+
+// ** redux
+import { useDispatch, useSelector } from 'react-redux'
+
 
 const VirticalSingleProduct = ({img,title,sales,hasBtn,price,altPrice,isBlog , object,id}) => {
+
+    // hooks
+    const navigat = useNavigate()
+
+    // ** states
     const [sign,setSign] = useState(null)
     const [signTitle , setSignTitle] = useState('')
     const [signDesc , setSignDesc] = useState('')
     const [signType,setSignType] = useState('success')
 
-    const handleRef = (ref)=>{
-        setSign(ref)
-    }
-    const navigat = useNavigate()
+
+    
+
+    // ** redux
     const {addProdcut} = CompareActions;
     const dispatch = useDispatch()
     const {isAuth} = useSelector(state=>state.AuthReducer)
     const {addWishlistItem} = WishlistActions;
+
+    // ** functions
+    const handleRef = (ref)=>{
+        setSign(ref)
+    }
 
     const handleClick = (e,type)=>{
         switch (type) {

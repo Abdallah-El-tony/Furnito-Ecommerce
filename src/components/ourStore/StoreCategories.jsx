@@ -1,9 +1,17 @@
+// ** axios import
 import axios from 'axios'
+
+// ** css 
 import './store.css'
-import React, { useEffect, useState } from 'react'
+
+//  hooks
+import { useEffect, useState } from 'react'
+
 const StoreCategories = ({setCurrentCaetegory}) => {
+
+    // ** hooks
     const [categories,setCategories] = useState([])
-    // const [currentCategory,setCurrentCategory] = useState('')
+
     useEffect(()=>{
         const getCategories = async()=>{
             try{

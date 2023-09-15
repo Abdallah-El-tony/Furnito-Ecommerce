@@ -1,15 +1,26 @@
+// ** Components
 import BreadCrump from '../components/BreadCrumb'
 import SearchFilter from '../components/shop/SearchFilter'
 import AccordinItems from '../components/shop/AccordinItems'
 import ShopProducts from '../components/shop/ShopProducts'
+
+// ** css
 import '../components/shop/shop.css'
+
+// ** Hooks & Custom Hooks
 import { useState } from 'react'
 import { useGetLocation } from '../hooks/useGetLocation'
 
 const Shop = () => {
+
+  // ** change web title
   useGetLocation()
+
+  // ** states
   const [filterData,setFilterData] = useState('')
   const [isSort , setIsSort] = useState(false)
+
+  // ** filter  functins
   const handleChange =(value) =>{
     setFilterData(value)
     setIsSort(false)
@@ -62,9 +73,9 @@ const Shop = () => {
                     </div>
                   </div>
                 </div>
-              <aside className='d-none d-md-block'>
-                  <SearchFilter onchangeData={handleChange}/>
-                  <AccordinItems getCategory={getCategory} getPrice={getPrice} getTag={getTag} getRate={getRate} getColor={getColor}/>
+                <aside className='d-none d-md-block'>
+                    <SearchFilter onchangeData={handleChange}/>
+                    <AccordinItems getCategory={getCategory} getPrice={getPrice} getTag={getTag} getRate={getRate} getColor={getColor}/>
                 </aside>
               </div>
               <div className="col-md-8 col-lg-9">
@@ -76,7 +87,6 @@ const Shop = () => {
         </div>
       </section>
 
-    
     </>
   )
 }

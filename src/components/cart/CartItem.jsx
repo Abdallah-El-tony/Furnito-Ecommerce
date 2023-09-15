@@ -1,6 +1,8 @@
-import React from 'react'
+// css
 import './cart.css'
+
 const CartItem = ({img,name,price,itemsNumber,qty , customStyle}) => {
+  
   return (
     <div className='cart d-flex justify-content-between align-items-center mb-3'>
         <div className="cart__info d-flex align-items-center gap-3">

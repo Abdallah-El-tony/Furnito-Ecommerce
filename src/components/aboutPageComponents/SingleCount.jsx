@@ -1,11 +1,11 @@
-import React, { useEffect, useState ,useRef } from 'react'
+// ** react hooks
+import { useEffect, useState ,useRef } from 'react'
 
 const SingleCounter = ({counter,title}) => {
-
+    // hooks
     const counterRef = useRef()
     const [count , setCount] = useState(0)
 
-    
     useEffect(()=>{
         let timer ;
         const handleScroll = ()=>{
