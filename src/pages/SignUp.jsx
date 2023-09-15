@@ -49,7 +49,6 @@ const SignUp = () => {
 
   // form validation
   const submitHandler = ()=>{
-    console.log(user.wishlist)
     delete user.confirmPassword
     if(user.userName === undefined || user.password===undefined){
       return
