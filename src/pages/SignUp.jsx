@@ -142,7 +142,6 @@ const SignUp = () => {
                           name='confirmPassword'
                           onChange={HandleChange}
                           />
-                          <span className='position-absolute eye' onClick={()=>setShowPassword(!showPassword)}>{showPassword?<EyeSlash size={20}/>:<Eye size={20}/>}</span>
                     </div> 
                        
                     {errors.confirmPassword?(
