@@ -38,7 +38,7 @@ export const useGetLocation = (id) => {
     else if (pathname==='/ordertrack') {
             return 'Order Track - Furnito';
     }
-    else if (pathname==='/compareproduct') {
+    else if (pathname==='/compareProduct') {
             return 'Compare - Furnito';
     }
     else if (pathname==='/shop') {

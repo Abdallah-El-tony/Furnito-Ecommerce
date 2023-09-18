@@ -30,6 +30,7 @@ import TotalPrice from "./cart/TotalPrice"
 import Sign from "./Sign"
 import LoginForm from "./LoginForm"
 import OrdarSummary from "./OrdarSummary"
+import ButtomNavbar from "./Navbar/ButtomNavbar"
 export {
     Navbar,
     WishList,
@@ -61,4 +62,5 @@ export {
     Sign,
     LoginForm,
     OrdarSummary,
+    ButtomNavbar
 }

@@ -3,7 +3,7 @@
 import {Person} from 'react-bootstrap-icons'
 
 // ** react router
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // ** redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,6 +13,7 @@ const Account = () => {
 
   // ** hooks
   const {isAuth} = useSelector(state=>state.AuthReducer)
+  const navigate = useNavigate()
 
   // ** redux
   const {logout} = AuthActions;
@@ -20,9 +21,9 @@ const Account = () => {
 
   const logOut = ()=>{
     
-    // redux
+    // log out
     dispatch(logout())
-    window.location.reload()
+    navigate('/login')
   }
 
   return (

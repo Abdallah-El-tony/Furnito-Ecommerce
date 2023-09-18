@@ -25,10 +25,13 @@ import { useState } from 'react';
 
 // ** animate css libirary
 import 'animate.css';
+import { useSelector } from 'react-redux';
 
 
 
 const Navbar = () => {
+
+  const {isAuth} = useSelector(state=>state.AuthReducer)
 
   const [toggle,setToggle] = useState(false)
   const toogleBarIcon = ()=>{
@@ -65,10 +68,10 @@ const Navbar = () => {
       <div className="bottom-header d-flex d-lg-none">
         <div className="container">
         <ul className='nav__controls-responsive'>
-                <a href='/cart'><button>{<Cart size={18}/>}</button><h6>Cart</h6></a>
-                <a href='/compareProduct'><button>{<ArrowRepeat size={20}/>}</button><h6>Compare</h6></a>
-                <a href='/wishList'><button>{<SuitHeart size={20}/>}</button><h6>Wishast</h6></a>
-                <a href='/login'><button>{<Person size={20}/>}</button><h6>Loge In</h6></a>
+                <Link to='/cart'><button>{<Cart size={18}/>}</button><h6>Cart</h6></Link>
+                <Link to='/compareProduct'><button>{<ArrowRepeat size={20}/>}</button><h6>Compare</h6></Link>
+                <Link to='/wishlistpage'><button>{<SuitHeart size={20}/>}</button><h6>Wishast</h6></Link>
+                <Link to='/login'><button>{<Person size={20}/>}</button><h6>{isAuth?'Log out':'Log In'}</h6></Link>
                 
           </ul>
         </div>
