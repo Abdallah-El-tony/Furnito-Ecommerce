@@ -23,6 +23,7 @@ const Account = () => {
     
     // log out
     dispatch(logout())
+    window.location.reload()
     navigate('/login')
   }
 
