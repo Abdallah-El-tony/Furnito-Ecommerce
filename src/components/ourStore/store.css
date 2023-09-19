@@ -180,4 +180,8 @@
     .tabs-content form{
         width:80%;
     }
+    .tabs button {
+        font-size:16px;
+        padding:10px 14px;
+    }
 }
