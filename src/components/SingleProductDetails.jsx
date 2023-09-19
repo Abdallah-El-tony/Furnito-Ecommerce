@@ -64,6 +64,9 @@ const SingleProductDetails = ({img,name,price,altPrice,sales , object}) => {
     }
     const addToCart = ()=>{
         dispatch(addItem(item))
+        setSignType('success')
+        setSignTitle('Go to Cart ')
+        setSignDesc('Item Added to Cart')
         sign.classList.add('show-sign')
             setTimeout(()=>{
                 sign.classList.remove('show-sign')
