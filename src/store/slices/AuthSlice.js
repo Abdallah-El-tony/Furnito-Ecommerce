@@ -13,7 +13,7 @@ let usersLength =JSON.parse(localStorage.getItem('totalUsers')) || 0;
     try {
       const data = await getTotalUsers();
       usersLength = data.length;
-      
+      localStorage.setItem('totalUsers',JSON.stringify(usersLength))
     } catch (error) {
       console.log(error)
     }
