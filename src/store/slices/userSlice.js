@@ -7,6 +7,13 @@ const initialState = {
 export const getUsers = createAsyncThunk('user/getUsers',async()=>{
     const response = await axios.get('https://my-server-rc7a.onrender.com/users')
     return response.data
+    
+})
+export const getTotalUsers = createAsyncThunk('user/getTotalUsers',async()=>{
+    const response = await axios.get('https://my-server-rc7a.onrender.com/users')
+    const totalUser = await response.data;
+    return totalUser.length;
+    
 })
 
 export const addUser = createAsyncThunk('user/addUser',async(user,thunkAPI)=>{
