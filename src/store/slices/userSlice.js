@@ -11,8 +11,8 @@ export const getUsers = createAsyncThunk('user/getUsers',async()=>{
 })
 export const getTotalUsers = createAsyncThunk('user/getTotalUsers',async()=>{
     const response = await axios.get('https://my-server-rc7a.onrender.com/users')
-    const totalUser = await response.data;
-    return totalUser.length;
+    console.log(response.data.length)
+    return response.data.length;
     
 })
 

@@ -1,11 +1,27 @@
 
-import { getUsers } from "./userSlice";
-
+import axios from "axios";
 const { createSlice } = require("@reduxjs/toolkit");
+
+const getTotalUsers = async()=>{
+    const response = await axios.get('https://my-server-rc7a.onrender.com/users')
+    return response.data
+}
+
+let usersLength =0;
+
+(async () => {
+    try {
+      const data = await getTotalUsers();
+      usersLength = data.length
+    } catch (error) {
+      console.log(error)
+    }
+  })();
+
 const initialState= {
-    isAuth:JSON.parse(localStorage.getItem('isAuth')) || false,
-    userId:JSON.parse(localStorage.getItem('userId')) || getUsers().length,
-    totalUsers:JSON.parse(localStorage.getItem('totalUsers')) || getUsers().length
+    isAuth:JSON.parse(localStorage.getItem('isAuth')),
+    userId:JSON.parse(localStorage.getItem('userId')),
+    totalUsers:JSON.parse(localStorage.getItem('totalUsers')) || usersLength
 }
 
 const AuthSlice = createSlice ({
