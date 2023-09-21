@@ -7,20 +7,21 @@ const getTotalUsers = async()=>{
     return response.data
 }
 
-let usersLength =0;
+let usersLength =JSON.parse(localStorage.getItem('totalUsers')) || 0;
 
 (async () => {
     try {
       const data = await getTotalUsers();
-      usersLength = data.length
+      usersLength = data.length;
+      
     } catch (error) {
       console.log(error)
     }
   })();
 
-const initialState= {
-    isAuth:JSON.parse(localStorage.getItem('isAuth')),
-    userId:JSON.parse(localStorage.getItem('userId')),
+    const initialState= {
+    isAuth:JSON.parse(localStorage.getItem('isAuth')) || false,
+    userId:JSON.parse(localStorage.getItem('userId')) || usersLength,
     totalUsers:JSON.parse(localStorage.getItem('totalUsers')) || usersLength
 }
 
