@@ -36,7 +36,7 @@ const AuthSlice = createSlice ({
             localStorage.setItem('isAuth',JSON.stringify(state.isAuth))
             state.totalUsers++;
             localStorage.setItem('totalUsers',JSON.stringify(state.totalUsers))
-            state.userId = state.totalUsers;
+            state.userId = JSON.parse(localStorage.getItem('totalUsers'))
             localStorage.setItem('userId',JSON.stringify(state.userId))
         },
         login:(state,action)=>{
