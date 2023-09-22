@@ -23,7 +23,7 @@ const getTotalUsers = async()=>{
 
     const initialState= {
     isAuth:JSON.parse(localStorage.getItem('isAuth')) || false,
-    userId:JSON.parse(localStorage.getItem('userId')) || 0,
+    userId:JSON.parse(localStorage.getItem('totalUsers')) || 0,
     totalUsers:JSON.parse(localStorage.getItem('totalUsers')) || 0
 }
 
