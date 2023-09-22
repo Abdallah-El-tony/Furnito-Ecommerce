@@ -2,7 +2,7 @@
 import { BreadCrumb ,SelectBox} from '../components'
 
 // ** react imports
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 
@@ -20,6 +20,7 @@ import { userSchema } from '../Validations/UserValidation'
 
 // bootstrap Icons
 import { Eye , EyeSlash } from 'react-bootstrap-icons'
+import axios from 'axios'
 
 const SignUp = () => {
 
@@ -41,16 +42,31 @@ const SignUp = () => {
     confirmPassword:"",
     city:"",
   }])
-
+  const [users,setUsers] = useState([])
+  const [isFound,setIsFound] = useState(false)
 
   const HandleChange = (e)=>{
     setUser({...user,[e.target.name]:e.target.value , cart:[],wishlist:[]})
   }
 
+  //  ** get users
+  useEffect(()=>{
+    const getData = async()=>{
+      const response = await axios.get('https://my-server-rc7a.onrender.com/users')
+      setUsers(response.data)
+    }
+    getData()
+  },[user.email])
+
   // form validation
   const submitHandler = ()=>{
     delete user.confirmPassword
-    if(user.userName === undefined || user.password===undefined){
+
+    const obj = users.find((User)=>User.email === user.email )
+    
+    if(user.userName === undefined || user.password===undefined || obj){
+      setIsFound(true)
+      console.log(isFound)
       return
     }
       dispatch(addUser(user))
@@ -102,7 +118,7 @@ const SignUp = () => {
                     />
                     {errors.email?(
                     <p className='text-danger'>{errors.email.message}</p>
-                    ):(<></>)}
+                    ):isFound?<p className='text-danger'>This Email is Already Exist</p>:(<></>)}
                 
                 <label htmlFor="Country">Country</label>
                 <SelectBox/>

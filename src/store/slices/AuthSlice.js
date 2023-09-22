@@ -5,7 +5,7 @@ import axios from "axios";
 const { createSlice } = require("@reduxjs/toolkit");
 
 
-// ** get user lingth
+// ** get user length
 const getTotalUsers = async()=>{
     const response = await axios.get('https://my-server-rc7a.onrender.com/users')
     return response.data
